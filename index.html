@@ -37,6 +37,39 @@
     to   { transform: scaleY(1); }
   }
   @media (max-width: 900px) { .hero-float-card { display: none !important; } }
+  
+  /* Mobile Responsive Best Practices */
+  @media (max-width: 768px) {
+    nav { padding: 16px 20px !important; flex-wrap: wrap; gap: 12px; }
+    nav > div:last-child { gap: 16px !important; width: 100%; justify-content: flex-start; margin-top: 4px; }
+    header { padding: 60px 20px 40px !important; }
+    header h1 { font-size: 42px !important; }
+    header p { font-size: 17px !important; }
+    header > div:last-child { flex-direction: column; align-items: stretch !important; gap: 10px !important; }
+    header > div:last-child a { justify-content: center; width: 100%; }
+    
+    #impact { padding: 40px 20px !important; }
+    #impact > div { grid-template-columns: repeat(2, 1fr) !important; gap: 32px !important; }
+    
+    section { padding: 60px 20px 20px !important; }
+    section > div[style*="repeat(2,1fr)"] { grid-template-columns: 1fr !important; gap: 16px !important; }
+    
+    #work > div:last-child > a > div { grid-template-columns: 1fr !important; padding: 28px 24px !important; gap: 16px !important; }
+    #work > div:last-child > a > div > div:last-child { display: none; }
+    
+    #skills > div[style*="repeat(2,1fr)"] { grid-template-columns: 1fr !important; gap: 24px !important; }
+    
+    #contact { padding: 0 20px !important; margin-top: 40px !important; }
+    #contact > div { padding: 36px 24px !important; }
+    #contact > div > div:last-child { flex-direction: column; align-items: stretch; }
+    #contact > div > div:last-child a { justify-content: center; }
+    
+    footer { padding: 32px 20px 40px !important; flex-direction: column; align-items: flex-start !important; gap: 12px !important; }
+  }
+  @media (max-width: 480px) {
+    #impact > div { grid-template-columns: 1fr !important; gap: 28px !important; }
+    header h1 { font-size: 36px !important; }
+  }
 </style>
 </helmet>
 
@@ -81,75 +114,6 @@
       </a>
     </div>
 
-    <!-- Floating monitoring-dashboard cluster, cascades in half-off the right edge -->
-    <div class="hero-float-card" style="position:absolute; top:58px; right:-78px; width:296px; display:flex; flex-direction:column; gap:16px; transform:rotate(-4deg); transform-origin:top right; animation:floatIn 0.9s cubic-bezier(0.22,1,0.36,1) both, floatCard 6.8s ease-in-out 0.9s infinite; z-index:5;">
-
-      <!-- Card 1: Mention counts -->
-      <div style="background:#fff; border:1px solid rgba(20,20,15,0.12); border-radius:18px; overflow:hidden;">
-        <div style="display:flex; align-items:center; justify-content:space-between; padding:13px 16px; background:rgba(20,20,15,0.035); border-bottom:1px solid rgba(20,20,15,0.08);">
-          <span style="font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.06em; color:#14140F; text-transform:uppercase; font-weight:700;">AI Mentions · Real-time</span>
-          <span style="width:5px; height:5px; border-radius:50%; background:var(--accent,#16A34A); display:inline-block;"></span>
-        </div>
-        <div style="padding:16px;">
-          <div style="display:flex; align-items:baseline; justify-content:space-between; margin-bottom:14px;">
-            <span style="font-family:var(--display,'Space Grotesk',sans-serif); font-size:40px; font-weight:700; letter-spacing:-0.03em; line-height:1;">24K</span>
-            <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--accent,#16A34A);">↑ 12% / 24h</span>
-          </div>
-          <div style="display:flex; height:9px; border-radius:100px; overflow:hidden; margin-bottom:12px;">
-            <div style="width:64%; background:var(--accent,#16A34A);"></div>
-            <div style="width:22%; background:#C9C7BC;"></div>
-            <div style="width:14%; background:#C2685B;"></div>
-          </div>
-          <div style="display:flex; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:9.5px;">
-            <div><div style="color:#6A685D;">Positive</div><div style="font-weight:700; color:#14140F;">16.1k</div></div>
-            <div><div style="color:#6A685D;">Neutral</div><div style="font-weight:700; color:#14140F;">5.4k</div></div>
-            <div><div style="color:#6A685D;">Negative</div><div style="font-weight:700; color:#14140F;">2.5k</div></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2: Share of voice -->
-      <div style="background:#fff; border:1px solid rgba(20,20,15,0.12); border-radius:18px; overflow:hidden;">
-        <div style="padding:13px 16px; background:rgba(20,20,15,0.035); border-bottom:1px solid rgba(20,20,15,0.08);">
-          <span style="font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.06em; color:#14140F; text-transform:uppercase; font-weight:700;">Share of Voice</span>
-        </div>
-        <div style="padding:16px; display:flex; align-items:center; gap:16px;">
-          <div style="position:relative; width:86px; height:86px; flex-shrink:0;">
-            <div style="width:100%; height:100%; border-radius:50%; background:conic-gradient(var(--accent,#16A34A) 0 54%, #2E2E28 54% 72%, #9C9A8E 72% 88%, #C9C7BC 88% 100%);"></div>
-            <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:46px; height:46px; border-radius:50%; background:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--display,'Space Grotesk',sans-serif); font-weight:700; font-size:16px; color:var(--accent,#16A34A);">54%</div>
-          </div>
-          <div style="display:flex; flex-direction:column; gap:7px; font-family:'JetBrains Mono',monospace; font-size:10px; color:#14140F;">
-            <div style="display:flex; align-items:center; gap:7px;"><span style="width:8px; height:8px; border-radius:2px; background:var(--accent,#16A34A);"></span>Brand · 54%</div>
-            <div style="display:flex; align-items:center; gap:7px;"><span style="width:8px; height:8px; border-radius:2px; background:#2E2E28;"></span>Comp 1 · 18%</div>
-            <div style="display:flex; align-items:center; gap:7px;"><span style="width:8px; height:8px; border-radius:2px; background:#9C9A8E;"></span>Comp 2 · 16%</div>
-            <div style="display:flex; align-items:center; gap:7px;"><span style="width:8px; height:8px; border-radius:2px; background:#C9C7BC;"></span>Comp 3 · 12%</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3: Trending queries (cut off the bottom/right) -->
-      <div style="background:#fff; border:1px solid rgba(20,20,15,0.12); border-radius:18px; overflow:hidden;">
-        <div style="display:flex; align-items:center; justify-content:space-between; padding:13px 16px; background:rgba(20,20,15,0.035); border-bottom:1px solid rgba(20,20,15,0.08);">
-          <span style="font-family:'JetBrains Mono',monospace; font-size:10.5px; letter-spacing:0.06em; color:#14140F; text-transform:uppercase; font-weight:700;">Trending Queries</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:9px; color:#6A685D;">BUZZ</span>
-        </div>
-        <div style="padding:6px 16px 14px;">
-          <div style="display:flex; align-items:center; justify-content:space-between; padding:9px 0; border-bottom:1px solid rgba(20,20,15,0.07);">
-            <span style="font-size:12.5px; font-weight:600; color:#14140F;">best SaaS analytics</span>
-            <span style="font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:700; color:var(--accent,#16A34A); background:rgba(22,163,74,0.12); padding:3px 8px; border-radius:100px;">8.1</span>
-          </div>
-          <div style="display:flex; align-items:center; justify-content:space-between; padding:9px 0; border-bottom:1px solid rgba(20,20,15,0.07);">
-            <span style="font-size:12.5px; font-weight:600; color:#14140F;">#BrandHub review</span>
-            <span style="font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:700; color:#14140F; background:rgba(20,20,15,0.06); padding:3px 8px; border-radius:100px;">7.5</span>
-          </div>
-          <div style="display:flex; align-items:center; justify-content:space-between; padding:9px 0;">
-            <span style="font-size:12.5px; font-weight:600; color:#14140F;">launch day pricing</span>
-            <span style="font-family:'JetBrains Mono',monospace; font-size:11px; font-weight:700; color:#14140F; background:rgba(20,20,15,0.06); padding:3px 8px; border-radius:100px;">6.9</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
   </header>
 
   <!-- IMPACT BAND -->
