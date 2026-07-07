@@ -18,6 +18,50 @@
   html { scroll-behavior: smooth; }
   body { margin: 0; }
   ::selection { background: #F59E0B; color: #fff; }
+
+  @media (max-width: 768px) {
+    /* Containers */
+    nav, header, section, footer { padding-left: 20px !important; padding-right: 20px !important; }
+    header { padding-top: 40px !important; padding-bottom: 40px !important; }
+    section { padding-top: 40px !important; }
+    
+    /* Typography */
+    h1 { font-size: 38px !important; line-height: 1.1 !important; }
+    h2 { font-size: 28px !important; line-height: 1.2 !important; }
+    h3 { font-size: 22px !important; }
+    
+    /* Force grids to single column */
+    div[style*="display:grid"], div[style*="display: grid"] {
+      grid-template-columns: 1fr !important;
+      gap: 20px !important;
+    }
+    
+    /* At a glance specific fix */
+    div[style*="repeat(4,1fr)"], div[style*="repeat(4, 1fr)"] {
+      grid-template-columns: 1fr 1fr !important;
+    }
+    
+    /* Flex containers that might need stacking */
+    div[style*="display:flex; justify-content:space-between"] {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 12px !important;
+    }
+    
+    /* Table Responsive */
+    table, thead, tbody, th, td, tr { display: block !important; width: 100% !important; }
+    thead tr { display: none !important; }
+    tr { margin-bottom: 16px !important; border: 1px solid rgba(20,20,15,0.1) !important; border-radius: 8px; padding: 12px; }
+    td { border-bottom: 1px solid rgba(20,20,15,0.05); padding: 8px 0 !important; }
+    td:last-child { border-bottom: none !important; }
+  }
+  @media (max-width: 480px) {
+    div[style*="repeat(4,1fr)"], div[style*="repeat(4, 1fr)"] {
+      grid-template-columns: 1fr !important;
+    }
+    h1 { font-size: 32px !important; }
+  }
+
 </style>
 </helmet>
 
