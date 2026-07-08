@@ -74,6 +74,33 @@
     .contact-box h2 { font-size: 34px !important; }
     .case-card h3 { font-size: 24px !important; }
   }
+
+  /* Work Grid Redesign */
+  .work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .case-card-v2 { text-decoration: none; color: inherit; display: flex; flex-direction: column; border-radius: 16px; overflow: hidden; transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1); cursor: pointer; height: 100%; border: 1px solid rgba(20,20,15,0.1); background: #fff; }
+  .case-card-v2:hover { transform: translateY(-8px); box-shadow: 0 16px 32px -16px rgba(20,20,15,0.25); border-color: rgba(20,20,15,0.3); }
+  .case-card-img-container { flex: 0 0 280px; width: 100%; overflow: hidden; position: relative; border-bottom: 1px solid rgba(20,20,15,0.1); }
+  .case-card-v2 .inner-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1); }
+  .case-card-v2:hover .inner-img { transform: scale(1.05); }
+  .case-card-v2 .card-content { flex: 1; display: flex; flex-direction: column; }
+  
+  .case-card-v2 .cta-btn { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; margin-top: auto; color: #14140F; transition: color 0.3s ease; }
+  .case-card-v2:hover .cta-btn { color: var(--accent, #16A34A); }
+  .case-card-v2 .cta-arrow { display: inline-block; transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1); }
+  .case-card-v2:hover .cta-arrow { transform: translateX(4px); }
+  
+  @media (prefers-reduced-motion) {
+    .case-card-v2 { transition: none; transform: none; box-shadow: none; }
+    .case-card-v2:hover { transform: none; }
+    .case-card-v2 .inner-img { transition: none; }
+    .case-card-v2:hover .inner-img { transform: none; }
+    .case-card-v2 .cta-arrow { transition: none; }
+    .case-card-v2:hover .cta-arrow { transform: none; }
+  }
+  @media (max-width: 768px) {
+    .work-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+    .case-card-img-container { flex: 0 0 220px; }
+  }
 </style>
 </helmet>
 
@@ -180,93 +207,75 @@
       <p style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6A685D; max-width:34ch; line-height:1.6; margin:0;">Strategy, approach, and measurable outcomes from four AI-search engagements.</p>
     </div>
 
-    <div style="display:flex; flex-direction:column; gap:16px;">
+    
+    <div class="work-grid">
 
-      <a href="case-growth-stacks.dc.html" style="text-decoration:none; color:inherit; display:block;">
-        <div class="case-card" style="background:var(--accent,#16A34A); color:#fff; border-radius:22px; padding:40px; display:grid; grid-template-columns:1fr auto; gap:30px; align-items:center;" style-hover="transform:translateY(-3px);">
-          <div>
-            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:20px;">
-              <span style="font-family:'JetBrains Mono',monospace; font-size:11px; background:rgba(255,255,255,0.2); padding:5px 11px; border-radius:100px;">FLAGSHIP</span>
-              <span style="font-family:'JetBrains Mono',monospace; font-size:11px; background:rgba(255,255,255,0.15); padding:5px 11px; border-radius:100px;">Dec 2024 — Feb 2026</span>
-            </div>
-            <h3 style="font-family:var(--display,'Space Grotesk',sans-serif); font-size:clamp(26px,3vw,40px); font-weight:600; letter-spacing:-0.025em; margin:0 0 12px; line-height:1.05;">AI Search Visibility, end-to-end</h3>
-            <p style="font-size:16px; line-height:1.55; opacity:0.92; margin:0 0 18px; max-width:60ch;">Growth Stacks — Consultant. Technical SEO, topical clusters &amp; JSON-LD schema to build entity authority and win citations across every major AI engine.</p>
-            <div style="display:flex; gap:32px; flex-wrap:wrap;">
-              <div><div style="font-family:var(--display,'Space Grotesk',sans-serif); font-size:28px; font-weight:700; letter-spacing:-0.02em;">30–40%</div><div style="font-family:'JetBrains Mono',monospace; font-size:11px; opacity:0.75; margin-top:4px;">organic lift / 6mo</div></div>
-              <div><div style="font-family:var(--display,'Space Grotesk',sans-serif); font-size:28px; font-weight:700; letter-spacing:-0.02em;">Live</div><div style="font-family:'JetBrains Mono',monospace; font-size:11px; opacity:0.75; margin-top:4px;">citation dashboard</div></div>
-            </div>
-          </div>
-          <div style="font-size:34px; font-weight:900;">→</div>
+      <!-- 1. Growth Stacks (Image Card - A) -->
+      <a href="case-growth-stacks.dc.html" class="case-card-v2">
+        <div class="case-card-img-container">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop" alt="Growth Stacks SEO analytics dashboard" class="inner-img" loading="lazy">
+        </div>
+        <div class="card-content" style="padding: 24px; background: #1A1A14; color: #F2F0E9;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; background:rgba(255,255,255,0.1); padding:4px 10px; border-radius:100px; display:inline-block; align-self:flex-start; margin-bottom:14px; letter-spacing:0.04em;">SEO · FLAGSHIP</div>
+          <h3 style="font-family:var(--display,'Space Grotesk',sans-serif); font-size:24px; font-weight:700; margin:0 0 8px; letter-spacing:-0.02em;">Growth Stacks — AI Visibility</h3>
+          <p style="font-size:14.5px; line-height:1.5; color:#B9B7AC; margin:0 0 24px; opacity:0.9;">End-to-end entity authority and technical SEO build, driving a 30-40% organic lift in 6 months across 4 AI engines.</p>
+          <div class="cta-btn" style="color:#F2F0E9;">View Case Study <span class="cta-arrow">→</span></div>
         </div>
       </a>
 
-      <a href="case-heurist.dc.html" style="text-decoration:none; color:inherit; display:block;">
-        <div class="case-card" style="background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:22px; padding:36px; display:grid; grid-template-columns:1fr auto; gap:30px; align-items:center;" style-hover="border-color:#14140F;">
-          <div>
-            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px;">
-              <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--accent,#16A34A); background:rgba(22,163,74,0.1); padding:5px 11px; border-radius:100px;">Heurist AI</span>
-              <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A685D; background:rgba(20,20,15,0.05); padding:5px 11px; border-radius:100px;">Oct 2023 — Nov 2024</span>
-            </div>
-            <h3 style="font-family:var(--display,'Space Grotesk',sans-serif); font-size:clamp(22px,2.4vw,31px); font-weight:600; letter-spacing:-0.02em; margin:0 0 10px; line-height:1.1;">AI marketing agents for brand monitoring</h3>
-            <p style="font-size:15px; line-height:1.55; color:#4A4941; margin:0; max-width:64ch;">Internal agents that prompt-test LLMs, converting raw outputs into citation, sentiment &amp; share-of-voice dashboards for real-time leadership visibility.</p>
-          </div>
-          <div style="font-size:28px; font-weight:900; color:var(--accent,#16A34A);">→</div>
+      <!-- 2. Heurist AI (Text Card - B) -->
+      <a href="case-heurist.dc.html" class="case-card-v2" style="background: #fff; padding: 32px; justify-content: center;">
+        <div class="card-content">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--accent,#16A34A); background:rgba(22,163,74,0.1); padding:4px 10px; border-radius:100px; display:inline-block; align-self:flex-start; margin-bottom:18px; letter-spacing:0.04em;">AI AUTOMATION</div>
+          <h3 style="font-family:var(--display,'Space Grotesk',sans-serif); font-size:32px; font-weight:700; margin:0 0 16px; letter-spacing:-0.02em; line-height:1.1;">Heurist AI — Brand Monitoring</h3>
+          <p style="font-size:15px; line-height:1.6; color:#4A4941; margin:0 0 32px;">Engineered custom internal agents that prompt-test LLMs at scale. Converted raw unstructured outputs into structured citation, sentiment, and share-of-voice executive dashboards.</p>
+          <div class="cta-btn">View Case Study <span class="cta-arrow">→</span></div>
         </div>
       </a>
 
-      <a href="case-sonic.dc.html" style="text-decoration:none; color:inherit; display:block;">
-        <div class="case-card" style="background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:22px; padding:36px; display:grid; grid-template-columns:1fr auto; gap:30px; align-items:center;" style-hover="border-color:#14140F;">
-          <div>
-            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px;">
-              <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--accent,#16A34A); background:rgba(22,163,74,0.1); padding:5px 11px; border-radius:100px;">Sonic DeFi</span>
-              <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A685D; background:rgba(20,20,15,0.05); padding:5px 11px; border-radius:100px;">Mar 2022 — Sept 2023</span>
-            </div>
-            <h3 style="font-family:var(--display,'Space Grotesk',sans-serif); font-size:clamp(22px,2.4vw,31px); font-weight:600; letter-spacing:-0.02em; margin:0 0 10px; line-height:1.1;">Search visibility for a DeFi/AMM product</h3>
-            <p style="font-size:15px; line-height:1.55; color:#4A4941; margin:0; max-width:64ch;">AEO/GEO content distributed across Reddit &amp; X to strengthen organic citations and brand presence in both traditional and LLM-driven search.</p>
-          </div>
-          <div style="font-size:28px; font-weight:900; color:var(--accent,#16A34A);">→</div>
+      <!-- 3. Sonic DeFi (Text Card - B) -->
+      <a href="case-sonic.dc.html" class="case-card-v2" style="background: #fff; padding: 32px; justify-content: center;">
+        <div class="card-content">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--accent,#16A34A); background:rgba(22,163,74,0.1); padding:4px 10px; border-radius:100px; display:inline-block; align-self:flex-start; margin-bottom:18px; letter-spacing:0.04em;">WEB3 · COMMUNITY</div>
+          <h3 style="font-family:var(--display,'Space Grotesk',sans-serif); font-size:32px; font-weight:700; margin:0 0 16px; letter-spacing:-0.02em; line-height:1.1;">Sonic DeFi — Organic Consensus</h3>
+          <p style="font-size:15px; line-height:1.6; color:#4A4941; margin:0 0 32px;">Captured search visibility for a Web3 AMM product by distributing native AEO/GEO content across Reddit &amp; X to build strong organic community citations.</p>
+          <div class="cta-btn">View Case Study <span class="cta-arrow">→</span></div>
         </div>
       </a>
 
-      <a href="case-aretto.dc.html" style="text-decoration:none; color:inherit; display:block;">
-        <div class="case-card" style="background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:22px; padding:36px; display:grid; grid-template-columns:1fr auto; gap:30px; align-items:center;" style-hover="border-color:#14140F;">
-          <div>
-            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px;">
-              <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--accent,#16A34A); background:rgba(22,163,74,0.1); padding:5px 11px; border-radius:100px;">Aretto</span>
-              <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A685D; background:rgba(20,20,15,0.05); padding:5px 11px; border-radius:100px;">Feb 2026 — Jun 2026</span>
-            </div>
-            <h3 style="font-family:var(--display,'Space Grotesk',sans-serif); font-size:clamp(22px,2.4vw,31px); font-weight:600; letter-spacing:-0.02em; margin:0 0 10px; line-height:1.1;">AI Search Visibility Engine for kids' footwear</h3>
-            <p style="font-size:15px; line-height:1.55; color:#4A4941; margin:0; max-width:64ch;">Establishing entity consensus and expert-backed E-E-A-T signals to capture recommendations and citations across ChatGPT, Perplexity, Gemini, and AI Overviews.</p>
-          </div>
-          <div style="font-size:28px; font-weight:900; color:var(--accent,#16A34A);">→</div>
+      <!-- 4. Aretto (Image Card - A) -->
+      <a href="case-aretto.dc.html" class="case-card-v2">
+        <div class="case-card-img-container">
+          <img src="https://images.unsplash.com/photo-1514989940723-e8e51635b782?q=80&w=1000&auto=format&fit=crop" alt="Aretto kids footwear D2C brand" class="inner-img" loading="lazy">
+        </div>
+        <div class="card-content" style="padding: 24px; background: #1A1A14; color: #F2F0E9;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; background:rgba(255,255,255,0.1); padding:4px 10px; border-radius:100px; display:inline-block; align-self:flex-start; margin-bottom:14px; letter-spacing:0.04em;">AEO · E-E-A-T</div>
+          <h3 style="font-family:var(--display,'Space Grotesk',sans-serif); font-size:24px; font-weight:700; margin:0 0 8px; letter-spacing:-0.02em;">Aretto — Search Engine</h3>
+          <p style="font-size:14.5px; line-height:1.5; color:#B9B7AC; margin:0 0 24px; opacity:0.9;">Established entity consensus and E-E-A-T signals to capture footwear category citations across ChatGPT, Perplexity, Gemini, and AI Overviews.</p>
+          <div class="cta-btn" style="color:#F2F0E9;">View Case Study <span class="cta-arrow">→</span></div>
         </div>
       </a>
 
-      <a href="case-smk.dc.html" style="text-decoration:none; color:inherit; display:block;">
-        <div class="case-card" style="background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:22px; padding:36px; display:grid; grid-template-columns:1fr auto; gap:30px; align-items:center;" style-hover="border-color:#14140F;">
-          <div>
-            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px;">
-              <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#F59E0B; background:rgba(245,158,11,0.1); padding:5px 11px; border-radius:100px;">Stock Market Kerala · SMK</span>
-              <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A685D; background:rgba(20,20,15,0.05); padding:5px 11px; border-radius:100px;">2025 — Ongoing</span>
-            </div>
-            <h3 style="font-family:var(--display,'Space Grotesk',sans-serif); font-size:clamp(22px,2.4vw,31px); font-weight:600; letter-spacing:-0.02em; margin:0 0 10px; line-height:1.1;">AI Search &amp; SEO for Financial Education</h3>
-            <p style="font-size:15px; line-height:1.55; color:#4A4941; margin:0; max-width:64ch;">12-part SEO, AEO, GEO, and E-E-A-T audit — building the strategic playbook to grow SMK from a dominant local brand into a nationally cited financial education authority.</p>
-          </div>
-          <div style="font-size:28px; font-weight:900; color:#F59E0B;">→</div>
+      <!-- 5. Stock Market Kerala (Image Card - A) -->
+      <a href="case-smk.dc.html" class="case-card-v2">
+        <div class="case-card-img-container">
+          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1000&auto=format&fit=crop" alt="Stock Market Kerala trading screen charts" class="inner-img" loading="lazy">
+        </div>
+        <div class="card-content" style="padding: 24px; background: #1A1A14; color: #F2F0E9;">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; background:rgba(255,255,255,0.1); padding:4px 10px; border-radius:100px; display:inline-block; align-self:flex-start; margin-bottom:14px; letter-spacing:0.04em;">SEO · GEO</div>
+          <h3 style="font-family:var(--display,'Space Grotesk',sans-serif); font-size:24px; font-weight:700; margin:0 0 8px; letter-spacing:-0.02em;">SMK — Organic Growth</h3>
+          <p style="font-size:14.5px; line-height:1.5; color:#B9B7AC; margin:0 0 24px; opacity:0.9;">Drove a +218% non-brand traffic increase by building a 100+ article educational hub and securing an estimated 25% AI voice share.</p>
+          <div class="cta-btn" style="color:#F2F0E9;">View Case Study <span class="cta-arrow">→</span></div>
         </div>
       </a>
 
-      <a href="case-zoople-webcastle.dc.html" style="text-decoration:none; color:inherit; display:block;">
-        <div class="case-card" style="background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:22px; padding:36px; display:grid; grid-template-columns:1fr auto; gap:30px; align-items:center;" style-hover="border-color:#14140F;">
-          <div>
-            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px;">
-              <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--accent,#16A34A); background:rgba(22,163,74,0.1); padding:5px 11px; border-radius:100px;">Zoople · Webcastle</span>
-              <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A685D; background:rgba(20,20,15,0.05); padding:5px 11px; border-radius:100px;">Growth &amp; paid</span>
-            </div>
-            <h3 style="font-family:var(--display,'Space Grotesk',sans-serif); font-size:clamp(22px,2.4vw,31px); font-weight:600; letter-spacing:-0.02em; margin:0 0 10px; line-height:1.1;">Full-funnel organic + paid growth</h3>
-            <p style="font-size:15px; line-height:1.55; color:#4A4941; margin:0; max-width:64ch;">Organic traffic growth &amp; retargeting across a client portfolio and admissions funnel — SEO intent tracking, on-page, and link building driving inbound.</p>
-          </div>
-          <div style="font-size:28px; font-weight:900; color:var(--accent,#16A34A);">→</div>
+      <!-- 6. Zoople / Webcastle (Text Card - B) -->
+      <a href="case-zoople-webcastle.dc.html" class="case-card-v2" style="background: #fff; padding: 32px; justify-content: center;">
+        <div class="card-content">
+          <div style="font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--accent,#16A34A); background:rgba(22,163,74,0.1); padding:4px 10px; border-radius:100px; display:inline-block; align-self:flex-start; margin-bottom:18px; letter-spacing:0.04em;">PAID · ORGANIC</div>
+          <h3 style="font-family:var(--display,'Space Grotesk',sans-serif); font-size:32px; font-weight:700; margin:0 0 16px; letter-spacing:-0.02em; line-height:1.1;">Zoople — Funnel Growth</h3>
+          <p style="font-size:15px; line-height:1.6; color:#4A4941; margin:0 0 32px;">Managed organic traffic growth and paid retargeting across an agency portfolio and admissions funnel, utilizing intent tracking to drive qualified inbound.</p>
+          <div class="cta-btn">View Case Study <span class="cta-arrow">→</span></div>
         </div>
       </a>
 
