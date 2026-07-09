@@ -11,602 +11,535 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<title>Stock Market Kerala — SEO, AEO &amp; GEO Organic Growth | Tibin Jacob</title>
-<meta name="description" content="How Tibin Jacob grew Stock Market Kerala's organic search visibility, built topical authority clusters, deployed E-E-A-T signals, and engineered AI search citations to outrank national EdTech platforms.">
+<title>Stock Market Kerala Case Study — SEO, AEO & GEO Growth | Tibin Jacob</title>
 <style>
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-  body { margin: 0; }
+  body { margin: 0; background:#F2F0E9; color:#14140F; font-family:'Archivo',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
   ::selection { background: #F59E0B; color: #fff; }
 
-  @media (max-width: 768px) {
-    /* Containers */
-    nav, header, section, footer { padding-left: 20px !important; padding-right: 20px !important; }
-    header { padding-top: 40px !important; padding-bottom: 40px !important; }
-    section { padding-top: 40px !important; }
-    
-    /* Typography */
-    h1 { font-size: 38px !important; line-height: 1.1 !important; }
-    h2 { font-size: 28px !important; line-height: 1.2 !important; }
-    h3 { font-size: 22px !important; }
-    
-    /* Force grids to single column */
-    div[style*="display:grid"], div[style*="display: grid"] {
-      grid-template-columns: 1fr !important;
-      gap: 20px !important;
-    }
-    
-    /* At a glance specific fix */
-    div[style*="repeat(4,1fr)"], div[style*="repeat(4, 1fr)"] {
-      grid-template-columns: 1fr 1fr !important;
-    }
-    
-    /* Flex containers that might need stacking */
-    div[style*="display:flex; justify-content:space-between"] {
-      flex-direction: column !important;
-      align-items: flex-start !important;
-      gap: 12px !important;
-    }
-    
-    /* Table Responsive */
-    table, thead, tbody, th, td, tr { display: block !important; width: 100% !important; }
-    thead tr { display: none !important; }
-    tr { margin-bottom: 16px !important; border: 1px solid rgba(20,20,15,0.1) !important; border-radius: 8px; padding: 12px; }
-    td { border-bottom: 1px solid rgba(20,20,15,0.05); padding: 8px 0 !important; }
-    td:last-child { border-bottom: none !important; }
+  /* Dual Column Layout */
+  .case-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 40px 40px 80px;
+    display: flex;
+    align-items: flex-start;
+    gap: 80px;
   }
-  @media (max-width: 480px) {
-    div[style*="repeat(4,1fr)"], div[style*="repeat(4, 1fr)"] {
-      grid-template-columns: 1fr !important;
-    }
-    h1 { font-size: 32px !important; }
+  
+  .sidebar {
+    flex: 0 0 280px;
+    position: sticky;
+    top: 120px;
+  }
+  
+  .content-column {
+    flex: 1;
+    max-width: 720px;
   }
 
+  .at-a-glance {
+    background: #fff;
+    border: 1px solid rgba(20,20,15,0.1);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-shadow: 0 4px 24px -12px rgba(20,20,15,0.05);
+  }
+
+  .glance-item .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #6A685D;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .glance-item .value {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #14140F;
+  }
+  
+  .content-section {
+    margin-bottom: 80px;
+  }
+
+  .content-section h2 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0 0 24px;
+    line-height: 1.2;
+  }
+  
+  .content-section h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 32px 0 16px;
+    color: #14140F;
+  }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: #F59E0B;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .content-section p, .content-section li {
+    font-size: 17.5px;
+    line-height: 1.65;
+    color: #3B3A33;
+    margin: 0 0 20px;
+  }
+  
+  .content-section ul, .content-section ol {
+    margin: 0 0 24px;
+    padding-left: 24px;
+  }
+  
+  .content-section li { margin-bottom: 10px; }
+  
+  /* Proof Images */
+  .proof-img-container {
+    margin: 32px 0;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(20,20,15,0.1);
+    background: #fff;
+    padding: 8px;
+    box-shadow: 0 12px 32px -12px rgba(20,20,15,0.1);
+  }
+  .proof-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    cursor: zoom-in;
+  }
+  .proof-caption {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #6A685D;
+    margin-top: 12px;
+    text-align: center;
+    padding-bottom: 8px;
+  }
+
+  /* Tables */
+  .comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 15px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(20,20,15,0.1);
+  }
+  
+  .comp-table th {
+    background: rgba(20,20,15,0.03);
+    text-align: left;
+    padding: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #6A685D;
+    border-bottom: 1px solid rgba(20,20,15,0.1);
+    letter-spacing: 0.05em;
+  }
+  
+  .comp-table td {
+    padding: 18px 16px;
+    border-bottom: 1px solid rgba(20,20,15,0.05);
+    color: #14140F;
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  .comp-table tr:last-child td { border-bottom: none; }
+
+  /* Layer Cards */
+  .layer-card {
+    background: #14140F;
+    color: #F2F0E9;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 12px 32px -12px rgba(20,20,15,0.3);
+  }
+  .layer-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #F59E0B;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+    display: block;
+  }
+  .layer-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 16px;
+    color: #fff;
+  }
+  .layer-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #B9B7AC;
+    margin: 0;
+  }
+
+  /* Metric Row */
+  .metric-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .metric-card {
+    background: #14140F;
+    color: #F2F0E9;
+    padding: 32px 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 12px 24px -12px rgba(20,20,15,0.25);
+  }
+  
+  .metric-val {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1;
+    color: #16A34A; /* Lighthouse Green */
+    margin-bottom: 12px;
+  }
+  
+  .metric-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #9C9A8E;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .callout {
+    background: #fff;
+    border-left: 4px solid #F59E0B;
+    padding: 24px;
+    border-radius: 0 12px 12px 0;
+    margin: 24px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #3B3A33;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  }
+
+  @media (max-width: 900px) {
+    .case-container {
+      flex-direction: column;
+      padding: 40px 20px;
+      gap: 48px;
+    }
+    .sidebar { position: static; width: 100%; flex: auto; }
+    .content-column { max-width: 100%; }
+    .metric-row { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    table, thead, tbody, th, td, tr { display: block; width: 100%; }
+    thead tr { display: none; }
+    tr { margin-bottom: 16px; border: 1px solid rgba(20,20,15,0.1); border-radius: 8px; padding: 12px; background: #fff; }
+    td { border-bottom: 1px solid rgba(20,20,15,0.05); padding: 8px 0; }
+  }
 </style>
 </helmet>
-
-<div style="background:#F2F0E9; color:#14140F; font-family:'Archivo',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden;">
 
   <!-- NAV -->
   <nav style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:18px 40px; background:rgba(242,240,233,0.82); backdrop-filter:blur(12px); border-bottom:1px solid rgba(20,20,15,0.1);">
     <a href="index.html" style="display:inline-flex; align-items:center; gap:9px; text-decoration:none; color:#14140F; font-family:'JetBrains Mono',monospace; font-size:12.5px;">← Tibin Jacob</a>
-    <a href="https://wa.me/918129917227" target="_blank" style="display:inline-flex; align-items:center; gap:8px; background:#14140F; color:#F2F0E9; font-weight:600; font-size:13px; padding:10px 18px; border-radius:100px; text-decoration:none;" style-hover="background:#F59E0B;">Contact</a>
+    <a href="https://wa.me/918129917227" target="_blank" style="display:inline-flex; align-items:center; gap:8px; background:#14140F; color:#F2F0E9; font-weight:600; font-size:13px; padding:10px 18px; border-radius:100px; text-decoration:none;">Contact</a>
   </nav>
 
   <!-- HERO -->
-  <header style="max-width:1080px; margin:0 auto; padding:80px 40px 56px;">
+  <header style="max-width:1120px; margin:0 auto; padding:100px 40px 20px;">
     <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:30px;">
-      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#fff; background:#F59E0B; padding:6px 12px; border-radius:100px;">SEO · AEO · GEO</span>
-      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A685D; background:rgba(20,20,15,0.05); padding:6px 12px; border-radius:100px;">Stock Market Kerala · stockmarketkerala.com</span>
-      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A685D; background:rgba(20,20,15,0.05); padding:6px 12px; border-radius:100px;">2025 — Ongoing</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#fff; background:#16A34A; padding:6px 12px; border-radius:100px; letter-spacing:0.04em;">SEO · AEO · GEO</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A685D; background:rgba(20,20,15,0.05); padding:6px 12px; border-radius:100px; letter-spacing:0.04em;">stockmarketkerala.com</span>
     </div>
-    <h1 style="font-size:clamp(38px,5.8vw,80px); line-height:0.96; font-weight:900; letter-spacing:-0.035em; margin:0; max-width:22ch;">AI Search &amp; SEO for Financial Education</h1>
-    <p style="font-size:clamp(17px,1.8vw,21px); line-height:1.5; color:#3B3A33; max-width:60ch; margin:32px 0 0;">Built the content engine, entity authority, and AI-search visibility system that moved Stock Market Kerala from a local directory listing to a consistently cited educational brand across Google, ChatGPT, Perplexity, and Gemini — competing head-on with national EdTech platforms.</p>
+    <h1 style="font-size:clamp(42px,6vw,76px); line-height:0.96; font-weight:900; letter-spacing:-0.035em; margin:0 0 24px; max-width:20ch;">AI Search &amp; SEO for Financial Education</h1>
+    <p style="font-size:20px; line-height:1.6; color:#4A4941; max-width:720px; margin:0;">Built the content engine, entity authority, and AI-search visibility system that moved Stock Market Kerala from a local directory listing to a consistently cited educational brand across Google, ChatGPT, Perplexity, and Gemini — competing head-on with national EdTech platforms.</p>
   </header>
 
-  <!-- AT A GLANCE -->
-  <section style="max-width:1080px; margin:0 auto; padding:0 40px 20px;">
-    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(20,20,15,0.12); border:1px solid rgba(20,20,15,0.12); border-radius:20px; overflow:hidden;">
-      <div style="background:#F2F0E9; padding:26px;">
-        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A685D; margin-bottom:10px;">ROLE</div>
-        <div style="font-size:16px; font-weight:700; line-height:1.3;">SEO · AEO · GEO Strategist</div>
+  <div class="case-container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="at-a-glance">
+        <div class="glance-item">
+          <div class="label">Role</div>
+          <div class="value">SEO · AEO · GEO Strategist</div>
+        </div>
+        <div class="glance-item">
+          <div class="label">Client</div>
+          <div class="value">Stock Market Kerala (Est. 2018)</div>
+        </div>
+        <div class="glance-item">
+          <div class="label">Focus</div>
+          <div class="value">Topical Authority · E-E-A-T · AI Citation Growth</div>
+        </div>
+        <div class="glance-item">
+          <div class="label">Headline Result</div>
+          <div class="value" style="color:#16A34A; font-size:24px; font-weight:800;">+218% Organic Clicks</div>
+        </div>
       </div>
-      <div style="background:#F2F0E9; padding:26px;">
-        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A685D; margin-bottom:10px;">CLIENT</div>
-        <div style="font-size:16px; font-weight:700; line-height:1.3;">Stock Market Kerala — SMK (Est. 2018, Kerala)</div>
-      </div>
-      <div style="background:#F2F0E9; padding:26px;">
-        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A685D; margin-bottom:10px;">FOCUS</div>
-        <div style="font-size:16px; font-weight:700; line-height:1.3;">Topical Authority · E-E-A-T · AI Citation Growth</div>
-      </div>
-      <div style="background:#F2F0E9; padding:26px;">
-        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A685D; margin-bottom:10px;">HEADLINE RESULT</div>
-        <div style="font-size:16px; font-weight:700; line-height:1.3; color:#F59E0B;">+218% Non-Brand Organic Traffic</div>
-      </div>
-    </div>
-  </section>
+    </aside>
 
-  <!-- STARTING CONTEXT -->
-  <section style="max-width:1080px; margin:0 auto; padding:80px 40px 0;">
-    <div style="display:grid; grid-template-columns:220px 1fr; gap:40px;">
-      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.08em; color:#6A685D; text-transform:uppercase;">/ Starting context</div>
-      <div>
-        <h2 style="font-size:clamp(26px,3vw,38px); font-weight:800; letter-spacing:-0.02em; margin:0 0 20px; line-height:1.1; max-width:26ch;">A well-loved local brand losing the search war to platforms it should dominate.</h2>
-        <p style="font-size:17px; line-height:1.6; color:#3B3A33; margin:0 0 16px; max-width:64ch;">
-          Stock Market Kerala had built real trust on the ground — 3 branches (Kochi, Kozhikode, Thiruvananthapuram), 7+ years operating, 4.7★ reviews on Justdial, and a premium course portfolio (₹20,000–₹39,500). But online, the brand was nearly invisible outside its own name.
-        </p>
-        <p style="font-size:17px; line-height:1.6; color:#3B3A33; margin:0; max-width:64ch;">
-          When prospective students searched <em>"best stock market course Kerala"</em>, <em>"stock market training Kochi"</em>, or asked ChatGPT to recommend trading institutes in Kerala — SMK rarely appeared. Entri App, Trade Talks, and TradeMax Academy dominated those conversations. The site's SEO was almost entirely conversion-page focused: great at capturing people who already knew SMK, useless at earning the people who didn't yet.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- BASELINE AUDIT -->
-  <section style="max-width:1080px; margin:0 auto; padding:60px 40px 0;">
-    <div style="background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:24px; padding:40px;">
-      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.08em; color:#F59E0B; text-transform:uppercase; margin-bottom:14px;">/ Baseline Audit — Week 1–2</div>
-      <h3 style="font-size:24px; font-weight:800; letter-spacing:-0.02em; margin:0 0 20px;">What the diagnostic revealed before any work began.</h3>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:20px; font-size:14.5px; color:#4A4941; line-height:1.6;">
-        <div>
-          <div style="font-weight:700; color:#14140F; margin-bottom:8px;">Search visibility gaps</div>
-          <ul style="margin:0; padding-left:18px; display:flex; flex-direction:column; gap:6px;">
-            <li>Ranking for brand queries only — zero visibility for non-brand commercial terms</li>
-            <li>Competitor Entri App ranking top-3 for 80%+ of high-intent Kerala trading course queries</li>
-            <li>No featured snippet eligibility — zero answer-formatted content anywhere on site</li>
-            <li>People Also Ask captured by Trade Talks and finfitedu.com — SMK absent</li>
-            <li>Knowledge Graph entry missing or incomplete — AI engines couldn't resolve the entity</li>
-          </ul>
-        </div>
-        <div>
-          <div style="font-weight:700; color:#14140F; margin-bottom:8px;">Content &amp; technical gaps</div>
-          <ul style="margin:0; padding-left:18px; display:flex; flex-direction:column; gap:6px;">
-            <li>Only 3 blog articles published (Jan 2025) — none structured for AI extractability</li>
-            <li>No FAQ schema, no HowTo schema, no Course schema on course pages</li>
-            <li>Meta titles missing trust signals — no student count, years of experience, or social proof</li>
-            <li>Image ALT text generic or absent — no descriptive, keyword-rich alternatives</li>
-            <li>Core Web Vitals flagged — LCP not within 2.5s target on mobile</li>
-            <li>No instructor bios, credentials, or author pages — critical E-E-A-T gap</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  
-  <!-- PHASE 1: SEO & TECHNICAL -->
-  <section style="max-width:1080px; margin:0 auto; padding:80px 40px 0;">
-    <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.08em; color:#6A685D; text-transform:uppercase; margin-bottom:24px;">/ Phase 1</div>
-    <h2 style="font-size:clamp(28px,3.2vw,42px); font-weight:800; letter-spacing:-0.02em; margin:0 0 40px; line-height:1.1;">Technical SEO, Topical Authority &amp; Ranking.</h2>
-    
-    <h3 style="font-size:22px; font-weight:700; margin:0 0 20px;">The SEO Strategy</h3>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:40px;">
-      <div style="background:#14140F; color:#F2F0E9; border-radius:16px; padding:24px;">
-            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#F59E0B; margin-bottom:10px;">LAYER 01 — ENTITY</div>
-      <div style="background:#14140F; color:#F2F0E9; border-radius:16px; padding:24px;">
-            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#F59E0B; margin-bottom:10px;">LAYER 02 — CONTENT</div>
-      <div style="background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.2); border-radius:16px; padding:24px;">
-            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#F59E0B; margin-bottom:10px;">LAYER 03 — EARNED MEDIA</div>
-            <div style="font-size:15px; font-weight:700; margin-bottom:8px; color:#14140F;">Build cross-domain consensus</div>
-            <p style="font-size:13.5px; line-height:1.6; color:#4A4941; margin:0;">Secured SMK features and citations on WealthNote, Justdial editorial roundups, regional finance YouTube channels, and Kerala education directories — creating the multi-domain corroboration that makes AI engines confident to recommend a brand.</p>
-          </div>
-          <div style="background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.2); border-radius:16px; padding:24px;">
-            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#F59E0B; margin-bottom:10px;">LAYER 04 — TECHNICAL</div>
-    </div>
-    
-    <h3 style="font-size:22px; font-weight:700; margin:0 0 20px;">What I Executed</h3>
-    <div style="display:flex; flex-direction:column; gap:24px; margin-bottom:48px;">
-      <!-- Content Hub Card -->
-      <div style="background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:24px; padding:40px; display:grid; grid-template-columns:auto 1fr; gap:36px; align-items:start; transition:all 0.3s ease;" style-hover="border-color:rgba(245,158,11,0.5); box-shadow:0 12px 24px -12px rgba(245,158,11,0.15); transform:translateY(-2px);">
-        <div style="width:68px; height:68px; background:rgba(245,158,11,0.12); border-radius:20px; display:flex; align-items:center; justify-content:center; color:#F59E0B;">
-          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l6 6v10a2 2 0 0 1-2 2z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M14 4v6h6M16 13H8M16 17H8M10 9H8"></path></svg>
-        </div>
-        <div>
-          <div style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#F59E0B; margin-bottom:12px; letter-spacing:0.06em; text-transform:uppercase; font-weight:700;">Content Hub</div>
-          <h3 style="font-size:26px; font-weight:800; margin:0 0 14px; letter-spacing:-0.02em;">100+ Article Topical Authority Build</h3>
-          <p style="font-size:15.5px; line-height:1.6; color:#4A4941; margin:0 0 14px; max-width:68ch;">
-            Mapped and created content across 5 topical clusters: <strong>Beginner Guides</strong>, <strong>Technical Analysis</strong>, <strong>Options &amp; Derivatives</strong>, <strong>Risk Management</strong>, and <strong>Trading Psychology</strong>. 
-          </p>
-          <p style="font-size:15.5px; line-height:1.6; color:#4A4941; margin:0 0 16px; max-width:68ch;">
-            Each article was written with a direct answer in the first 2 sentences (targeting the 44% of AI citations that come from a page's first 30%), structured under keyword-rich H2/H3 headers, and published with FAQPage JSON-LD blocks. Priority was given to listicle and comparison formats, the most cited in AI commercial recommendations.
-          </p>
-          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6A685D; background:rgba(20,20,15,0.04); display:inline-block; padding:8px 14px; border-radius:100px;">
-            Published on: <a href="https://stockmarketkerala.com/blog/" target="_blank" style="color:#F59E0B; text-decoration:none; font-weight:700;">stockmarketkerala.com/blog/</a>
-          </div>
-        </div>
-      <!-- SEO On-Page Card -->
-      <div style="background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:24px; padding:40px; display:grid; grid-template-columns:auto 1fr; gap:36px; align-items:start; transition:all 0.3s ease;" style-hover="border-color:rgba(245,158,11,0.5); box-shadow:0 12px 24px -12px rgba(245,158,11,0.15); transform:translateY(-2px);">
-        <div style="width:68px; height:68px; background:rgba(245,158,11,0.12); border-radius:20px; display:flex; align-items:center; justify-content:center; color:#F59E0B;">
-          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-        </div>
-        <div>
-          <div style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#F59E0B; margin-bottom:12px; letter-spacing:0.06em; text-transform:uppercase; font-weight:700;">SEO On-Page</div>
-          <h3 style="font-size:26px; font-weight:800; margin:0 0 14px; letter-spacing:-0.02em;">Meta, Heading &amp; Conversion Page Overhaul</h3>
-          <p style="font-size:15.5px; line-height:1.6; color:#4A4941; margin:0 0 12px; max-width:68ch;">
-            Rewrote all course page meta titles to include trust signals: <em>"Kerala's #1 Stock Market Training Institute — 1,000+ Students | SMK"</em>. Expanded H2 sections on course pages to cover syllabus breakdown, fees transparency, FAQs, placement support, and mentor profiles.
-          </p>
-          <p style="font-size:15.5px; line-height:1.6; color:#4A4941; margin:0 0 12px; max-width:68ch;">
-            Built 3 city-specific landing pages (Kochi, Kozhikode, Thiruvananthapuram) with unique, locally-optimized content capturing location-intent searches.
-          </p>
-          <p style="font-size:15.5px; line-height:1.6; color:#4A4941; margin:0; max-width:68ch;">
-            Added comparison pages targeting commercial-research queries: "Online vs Offline stock market course", intercepting users mid-decision.
-          </p>
-        </div>
-      </div>
-      <!-- Technical Card -->
-      <div style="background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:24px; padding:40px; display:grid; grid-template-columns:auto 1fr; gap:36px; align-items:start; transition:all 0.3s ease;" style-hover="border-color:rgba(245,158,11,0.5); box-shadow:0 12px 24px -12px rgba(245,158,11,0.15); transform:translateY(-2px);">
-        <div style="width:68px; height:68px; background:rgba(245,158,11,0.12); border-radius:20px; display:flex; align-items:center; justify-content:center; color:#F59E0B;">
-          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-        </div>
-        <div>
-          <div style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#F59E0B; margin-bottom:12px; letter-spacing:0.06em; text-transform:uppercase; font-weight:700;">Technical</div>
-          <h3 style="font-size:26px; font-weight:800; margin:0 0 14px; letter-spacing:-0.02em;">Schema Deployment &amp; Core Web Vitals Fix</h3>
-          <p style="font-size:15.5px; line-height:1.6; color:#4A4941; margin:0; max-width:68ch;">
-            Injected complete JSON-LD schema coverage: <strong>Organization</strong>, <strong>LocalBusiness</strong>, <strong>Course</strong>, <strong>FAQPage</strong>, <strong>BreadcrumbList</strong>, and <strong>Person</strong> schema. Fixed LCP from 4.2s → 2.1s through image compression, lazy loading, and Elementor CSS optimization. Updated robots.txt to explicitly permit GPTBot, PerplexityBot, Google-Extended, and ClaudeBot.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- GSC EVIDENCE BLOCK -->
-    <div style="background:rgba(20,20,15,0.03); border:1px solid rgba(20,20,15,0.1); border-radius:24px; padding:40px;">
-      <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#F59E0B; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:16px;">Traffic Evidence</div>
-      <p style="font-size:15.5px; line-height:1.6; color:#4A4941; margin:0 0 16px;">
-        The Search Console panel is the raw-traffic evidence behind the +218% non-brand organic result. The 100+ article topical-authority build pushed the property to 197K impressions and 5.12K clicks, with the head commercial terms ranking top of page one — "best stock trading institute in Kerala," "best stock trading course in Kerala," "No.1 stock trading institute in Kerala" — alongside local-intent terms like "trading institute in Kochi" and "stock trading training near me."
-      </p>
-      <p style="font-size:15.5px; line-height:1.6; color:#4A4941; margin:0 0 32px;">
-        The 197K impressions reflect the breadth of the indexed content footprint — the topical clusters surfacing across a wide query space, which is exactly what a topical-authority engine should produce. The blended "average position" of 40.8 is a site-wide figure pulled down by that long tail of newly-ranking articles; it is not the position of the money terms, which sit at the top of page one. The 2.6% blended CTR tracks with that mix of high-ranking head terms plus lower-ranking long-tail impressions. Read together, the panel shows a wide, growing search footprint — not a handful of lucky keywords.
-      </p>
+    <!-- CONTENT -->
+    <main class="content-column">
       
-      <figure style="margin:0;">
-        <a href="https://i.ibb.co/qFFgWvjB/1000206344.png" target="_blank" style="display:block;">
-          <img src="https://i.ibb.co/qFFgWvjB/1000206344.png" 
-               alt="Google Search Console performance for stockmarketkerala.com — 5.12K clicks, 197K impressions, 2.6% average CTR, 40.8 average position — with top keywords including 'best stock trading institute in Kerala' and 'No.1 stock trading institute in Kerala'." 
-               loading="lazy" 
-               style="width:100%; max-width:100%; height:auto; border-radius:12px; border:1px solid rgba(20,20,15,0.1); box-shadow:0 8px 24px -8px rgba(0,0,0,0.05);">
-        </a>
-        <figcaption style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A685D; margin-top:12px; text-align:center;">
-          "Google Search Console — verified property stockmarketkerala.com. Web search, custom date range [Jan 2025 - Jun 2025]."
-        </figcaption>
-      </figure>
-      <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ImageObject",
-        "contentUrl": "https://i.ibb.co/qFFgWvjB/1000206344.png",
-        "caption": "Google Search Console performance for stockmarketkerala.com — 5.12K clicks, 197K impressions, 2.6% average CTR, 40.8 average position",
-        "description": "Google Search Console — verified property stockmarketkerala.com. Web search, custom date range."
-      }
-      </script>
-    </div>
-  </section>
+      <!-- Section 1 -->
+      <section class="content-section">
+        <div class="section-label">/ 01 Starting Context</div>
+        <h2>A well-loved local brand losing the search war to platforms it should dominate.</h2>
+        <p>Stock Market Kerala had built real trust on the ground — 3 branches (Kochi, Kozhikode, Thiruvananthapuram), 7+ years operating, 4.7★ reviews on Justdial, and a premium course portfolio. But online, the brand was nearly invisible outside its own name.</p>
+        <p>When prospective students searched <em>"best stock market course Kerala"</em>, <em>"stock market training Kochi"</em>, or asked ChatGPT to recommend trading institutes in Kerala — SMK rarely appeared. Entri App, Trade Talks, and TradeMax Academy dominated those conversations. The site's SEO was almost entirely conversion-page focused: great at capturing people who already knew SMK, useless at earning the people who didn't yet.</p>
+      </section>
 
-  <!-- PHASE 2: AEO & GEO -->
-  <section style="max-width:1080px; margin:0 auto; padding:80px 40px 0;">
-    <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.08em; color:#6A685D; text-transform:uppercase; margin-bottom:24px;">/ Phase 2</div>
-    <h2 style="font-size:clamp(28px,3.2vw,42px); font-weight:800; letter-spacing:-0.02em; margin:0 0 40px; line-height:1.1;">AEO, GEO &amp; AI Answer Engine Optimization.</h2>
-    
-    <h3 style="font-size:22px; font-weight:700; margin:0 0 20px;">The AEO/GEO Strategy</h3>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:40px;">
-      <div style="background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.2); border-radius:16px; padding:24px;">
-            <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#F59E0B; margin-bottom:10px;">LAYER 03 — EARNED MEDIA</div>
-    </div>
-    
-    <h3 style="font-size:22px; font-weight:700; margin:0 0 20px;">What I Executed</h3>
-    <div style="display:flex; flex-direction:column; gap:24px;">
-      <!-- E-E-A-T Build Card -->
-      <div style="background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:24px; padding:40px; display:grid; grid-template-columns:auto 1fr; gap:36px; align-items:start; transition:all 0.3s ease;" style-hover="border-color:rgba(245,158,11,0.5); box-shadow:0 12px 24px -12px rgba(245,158,11,0.15); transform:translateY(-2px);">
-        <div style="width:68px; height:68px; background:rgba(245,158,11,0.12); border-radius:20px; display:flex; align-items:center; justify-content:center; color:#F59E0B;">
-          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-        </div>
-        <div>
-          <div style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#F59E0B; margin-bottom:12px; letter-spacing:0.06em; text-transform:uppercase; font-weight:700;">E-E-A-T Build</div>
-          <h3 style="font-size:26px; font-weight:800; margin:0 0 14px; letter-spacing:-0.02em;">Instructor Authority Pages &amp; Trust Signals</h3>
-          <p style="font-size:15.5px; line-height:1.6; color:#4A4941; margin:0 0 12px; max-width:68ch;">
-            Built dedicated instructor profile pages for SMK's lead mentors featuring NISM certification details, years of market experience, and social proof. Marked up with Person schema so AI engines could attribute subject-matter authority to named individuals.
-          </p>
-          <p style="font-size:15.5px; line-height:1.6; color:#4A4941; margin:0; max-width:68ch;">
-            Published student case study articles — named alumni success stories with trading milestones and before/after skill transformations, serving as E-E-A-T Experience evidence for search engines evaluating the site's credibility in a YMYL niche.
-          </p>
-        </div>
-      </div>
-      <!-- GEO Work Card -->
-      <div style="background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:24px; padding:40px; display:grid; grid-template-columns:auto 1fr; gap:36px; align-items:start; transition:all 0.3s ease;" style-hover="border-color:rgba(245,158,11,0.5); box-shadow:0 12px 24px -12px rgba(245,158,11,0.15); transform:translateY(-2px);">
-        <div style="width:68px; height:68px; background:rgba(245,158,11,0.12); border-radius:20px; display:flex; align-items:center; justify-content:center; color:#F59E0B;">
-          <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-        </div>
-        <div>
-          <div style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#F59E0B; margin-bottom:12px; letter-spacing:0.06em; text-transform:uppercase; font-weight:700;">GEO Work</div>
-          <h3 style="font-size:26px; font-weight:800; margin:0 0 14px; letter-spacing:-0.02em;">Cross-Domain Entity Consensus &amp; Citations</h3>
-          <p style="font-size:15.5px; line-height:1.6; color:#4A4941; margin:0 0 12px; max-width:68ch;">
-            Secured SMK placements in third-party "Best trading institutes Kerala" editorial lists, Justdial category roundups, and regional finance education directories. Each placement carried identical entity facts, building the cross-domain consensus required by AI engines.
-          </p>
-          <p style="font-size:15.5px; line-height:1.6; color:#4A4941; margin:0; max-width:68ch;">
-            Optimized SMK's Google Business Profiles for all 3 branches by adding Q&amp;A content mirroring common queries and updated photos with keyword-rich captions. GBP listings are heavily cited by Gemini and Google AI Overviews.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-\n  <!-- MEASUREMENT SYSTEM -->
-  <section style="max-width:1080px; margin:0 auto; padding:80px 40px 0;">
-    <div style="background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:24px; padding:40px;">
-      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.08em; color:#F59E0B; text-transform:uppercase; margin-bottom:14px;">/ Measurement System</div>
-      <h3 style="font-size:26px; font-weight:800; margin:0 0 16px; letter-spacing:-0.02em; line-height:1.1;">Tracking Share of Voice across 4 AI engines + Google Search.</h3>
-      <p style="font-size:16px; line-height:1.6; color:#3B3A33; margin:0 0 24px; max-width:72ch;">
-        Ran a weekly 20-prompt manual panel across ChatGPT, Perplexity, Gemini, and Google AI Overviews — targeting the exact queries prospective students use. Logged SMK's mention rate, citation rate (direct URL appearing in AI response), list position, competitor share, and sentiment tone. Alongside, tracked GA4 organic sessions, branded vs non-branded click splits via Google Search Console, and GBP impressions across all 3 locations.
-      </p>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; font-size:14px; color:#4A4941;">
-        <div style="background:rgba(20,20,15,0.03); padding:20px; border-radius:14px;">
-          <h4 style="font-size:15px; font-weight:700; margin:0 0 10px; color:#14140F;">AI Tracking Panel — 20 Money Prompts</h4>
-          <ul style="margin:0; padding-left:18px; display:flex; flex-direction:column; gap:6px; font-style:italic;">
-            <li>"best stock market course in Kerala"</li>
-            <li>"stock market training institute Kochi"</li>
-            <li>"how to learn stock trading Kerala"</li>
-            <li>"trusted trading academy Kozhikode"</li>
-            <li>"online stock market course Kerala in Malayalam"</li>
-          </ul>
-        </div>
-        <div style="background:rgba(20,20,15,0.03); padding:20px; border-radius:14px;">
-          <h4 style="font-size:15px; font-weight:700; margin:0 0 10px; color:#14140F;">Tracked Metrics</h4>
-          <ul style="margin:0; padding-left:18px; display:flex; flex-direction:column; gap:6px;">
-            <li><strong>AI Mention Rate:</strong> % of prompts naming SMK</li>
-            <li><strong>Citation Rate:</strong> % where stockmarketkerala.com is linked</li>
-            <li><strong>Share of Voice:</strong> SMK mentions ÷ total Kerala institute mentions</li>
-            <li><strong>AI Overview Appearances:</strong> # of prompts surfacing an AI Overview with SMK</li>
-            <li><strong>Non-Brand CTR:</strong> Google Search Console, filtered non-brand queries</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+      <!-- Section 2 -->
+      <section class="content-section">
+        <div class="section-label">/ 02 Baseline Audit</div>
+        <h2>What the diagnostic revealed before any work began.</h2>
+        
+        <h3>Search visibility gaps:</h3>
+        <ul>
+          <li>Ranking for brand queries only — zero visibility for non-brand commercial terms.</li>
+          <li>Competitor Entri App ranking top-3 for 80%+ of high-intent Kerala trading course queries.</li>
+          <li>No featured snippet eligibility — zero answer-formatted content anywhere on site.</li>
+          <li>People Also Ask captured by Trade Talks and finfitedu.com — SMK absent.</li>
+          <li>Knowledge Graph entry missing or incomplete — AI engines couldn't resolve the entity.</li>
+        </ul>
 
-  <!-- OUTCOMES -->
-  <section style="background:#14140F; color:#F2F0E9; padding:88px 40px; margin-top:88px;">
-    <div style="max-width:1080px; margin:0 auto;">
-      <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.08em; color:#F59E0B; text-transform:uppercase; margin-bottom:14px;">/ Impact &amp; Results</div>
-      <h2 style="font-size:clamp(28px,4vw,52px); font-weight:900; letter-spacing:-0.03em; margin:0 0 56px; line-height:1;">From local listing to AI-recommended authority.</h2>
+        <h3>Content &amp; technical gaps:</h3>
+        <ul>
+          <li>Only 3 blog articles published — none structured for AI extractability.</li>
+          <li>No FAQ schema, no HowTo schema, no Course schema on course pages.</li>
+          <li>Meta titles missing trust signals — no student count, years of experience, or social proof.</li>
+          <li>Image ALT text generic or absent.</li>
+          <li>Core Web Vitals flagged — LCP not within 2.5s target on mobile.</li>
+          <li>No instructor bios, credentials, or author pages — critical E-E-A-T gap.</li>
+        </ul>
+      </section>
 
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; margin-bottom:72px;">
-        <div>
-          <div style="font-size:clamp(60px,10vw,130px); font-weight:900; letter-spacing:-0.04em; line-height:0.85; color:#fff;">+218<span style="color:#F59E0B;">%</span></div>
-          <div style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#F59E0B; margin-top:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.05em;">Non-brand organic clicks growth</div>
-          <p style="font-size:16px; line-height:1.55; color:#B9B7AC; margin:22px 0 0; max-width:38ch;">
-            Driven by the topical content hub — Google now surfaces SMK blog articles for educational queries that previously went entirely to Entri App and Zerodha Varsity.
-          </p>
+      <!-- Section 3 -->
+      <section class="content-section">
+        <div class="section-label">/ 03 Strategy</div>
+        <h2>The 4-Layer Organic Authority Engine.</h2>
+        <p>AI engines and Google both operate on the same signal: they cite brands whose entity facts are consistent, whose content answers questions directly, and whose authority is corroborated by independent third-party sources. For SMK, the winning system required four compounding layers.</p>
+        
+        <div class="layer-card">
+          <span class="layer-label">Layer 01 — Entity</span>
+          <h3>Lock the brand entity facts</h3>
+          <p>One set of verifiable facts — "7+ years operating", "3 branches: Kochi, Kozhikode, Trivandrum", "NISM-trained instructors", "1,000+ students" — repeated consistently across the site, GBP, directories, and all published content.</p>
+        </div>
+        
+        <div class="layer-card">
+          <span class="layer-label">Layer 02 — Content</span>
+          <h3>Build an answer-first content hub</h3>
+          <p>100+ educational articles written in direct Q→A format targeting every query a Kerala trading student would ask — from "how does a stock market work" through to "best options strategy for beginners India". Each structured for Featured Snippet and AI Overview eligibility.</p>
         </div>
 
-        <!-- AI Citation Index chart -->
-        <div>
-          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#9C9A8E; margin-bottom:20px;">AI SHARE OF VOICE — 20-PROMPT PANEL (Kerala Trading Queries)</div>
-          <div style="display:flex; align-items:flex-end; gap:12px; height:200px; padding-bottom:8px; border-bottom:1px solid rgba(242,240,233,0.1);">
-            <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:8px;">
-              <div style="width:100%; background:rgba(242,240,233,0.1); border-radius:4px 4px 0 0; height:5%;"></div>
-              <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#9C9A8E;">M1 (5%)</span>
-            </div>
-            <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:8px;">
-              <div style="width:100%; background:rgba(242,240,233,0.15); border-radius:4px 4px 0 0; height:14%;"></div>
-              <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#9C9A8E;">M2 (14%)</span>
-            </div>
-            <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:8px;">
-              <div style="width:100%; background:rgba(245,158,11,0.35); border-radius:4px 4px 0 0; height:27%;"></div>
-              <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#9C9A8E;">M3 (27%)</span>
-            </div>
-            <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:8px;">
-              <div style="width:100%; background:rgba(245,158,11,0.6); border-radius:4px 4px 0 0; height:38%;"></div>
-              <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#9C9A8E;">M4 (38%)</span>
-            </div>
-            <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:8px;">
-              <div style="width:100%; background:rgba(245,158,11,0.8); border-radius:4px 4px 0 0; height:49%;"></div>
-              <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#9C9A8E;">M5 (49%)</span>
-            </div>
-            <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:8px;">
-              <div style="width:100%; background:#F59E0B; border-radius:4px 4px 0 0; height:62%;"></div>
-              <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#F2F0E9; font-weight:700;">M6 (62%)</span>
-            </div>
-          </div>
+        <div class="layer-card">
+          <span class="layer-label">Layer 03 — Earned Media</span>
+          <h3>Build cross-domain consensus</h3>
+          <p>Secured SMK features and citations on WealthNote, Justdial editorial roundups, regional finance YouTube channels, and Kerala education directories — creating the multi-domain corroboration that makes AI engines confident to recommend a brand.</p>
         </div>
-      </div>
 
-      <!-- metrics table -->
-      <div style="margin-bottom:60px; overflow-x:auto;">
-        <table style="width:100%; border-collapse:collapse; text-align:left; font-size:14.5px;">
+        <div class="layer-card">
+          <span class="layer-label">Layer 04 — Technical</span>
+          <h3>Make every page machine-readable</h3>
+          <p>Deployed Organization + LocalBusiness + Course + FAQPage + BreadcrumbList JSON-LD schemas. Fixed Core Web Vitals LCP to under 2.5s. Enabled GPTBot and PerplexityBot in robots.txt. Implemented self-referencing canonical tags across all indexable pages.</p>
+        </div>
+      </section>
+
+      <!-- Section 4 -->
+      <section class="content-section">
+        <div class="section-label">/ 04 Execution</div>
+        <h2>What I Executed</h2>
+        
+        <div class="callout">
+          <strong style="color:#14140F; display:block; margin-bottom:8px;">Content Hub — 100+ Article Topical Authority Build</strong>
+          Mapped and created content across 5 topical clusters: Beginner Guides, Technical Analysis, Options & Derivatives, Risk Management, and Trading Psychology. Each article was written with a direct answer in the first 2 sentences (targeting the 44% of AI citations that come from a page's first 30%), structured under keyword-rich H2/H3 headers, and published with FAQPage JSON-LD blocks.
+        </div>
+        
+        <div class="callout">
+          <strong style="color:#14140F; display:block; margin-bottom:8px;">SEO On-Page — Meta, Heading & Conversion Page Overhaul</strong>
+          Rewrote all course page meta titles to include trust signals: *"Kerala's #1 Stock Market Training Institute — 1,000+ Students | SMK"*. Built 3 city-specific landing pages (Kochi, Kozhikode, Thiruvananthapuram) with locally-optimized content capturing location-intent searches. Added comparison pages targeting commercial-research queries.
+        </div>
+
+        <div class="callout">
+          <strong style="color:#14140F; display:block; margin-bottom:8px;">E-E-A-T Build — Instructor Authority Pages</strong>
+          Built dedicated instructor profile pages featuring NISM certification details, years of market experience, and social proof. Marked up with Person schema so AI engines could attribute subject-matter authority to named individuals.
+        </div>
+
+        <div class="callout">
+          <strong style="color:#14140F; display:block; margin-bottom:8px;">GEO Work — Cross-Domain Entity Consensus</strong>
+          Secured SMK placements in third-party "Best trading institutes Kerala" editorial lists. Each placement carried identical entity facts, building the cross-domain consensus required by AI engines. Optimized SMK's Google Business Profiles for all 3 branches, heavily cited by Gemini and Google AI Overviews.
+        </div>
+
+        <div class="callout">
+          <strong style="color:#14140F; display:block; margin-bottom:8px;">Technical — Schema Deployment & Core Web Vitals</strong>
+          Injected complete JSON-LD schema coverage (Organization, LocalBusiness, Course, FAQPage, BreadcrumbList, Person). Fixed LCP from 4.2s to 2.1s through image compression, lazy loading, and CSS optimization.
+        </div>
+      </section>
+      
+      <!-- Section 5 -->
+      <section class="content-section">
+        <div class="section-label">/ 05 Measurement System</div>
+        <h2>Tracking Share of Voice across 4 AI engines + Google Search</h2>
+        <p>Ran a weekly 20-prompt manual panel across ChatGPT, Perplexity, Gemini, and Google AI Overviews — targeting the exact queries prospective students use. Logged SMK's mention rate, citation rate (direct URL appearing in AI response), list position, competitor share, and sentiment tone.</p>
+        
+        <ul style="background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:12px; padding:24px 24px 24px 44px; font-family:'JetBrains Mono',monospace; font-size:14px; color:#4A4941;">
+          <li style="margin-bottom:12px; font-weight:600;">"best stock market course in Kerala"</li>
+          <li style="margin-bottom:12px; font-weight:600;">"stock market training institute Kochi"</li>
+          <li style="margin-bottom:12px; font-weight:600;">"how to learn stock trading Kerala"</li>
+          <li style="margin-bottom:12px; font-weight:600;">"trusted trading academy Kozhikode"</li>
+          <li style="font-weight:600;">"online stock market course Kerala in Malayalam"</li>
+        </ul>
+      </section>
+
+      <!-- Section 6 -->
+      <section class="content-section">
+        <div class="section-label">/ 06 Impact &amp; Results</div>
+        <h2>From local listing to AI-recommended authority</h2>
+        
+        <div class="proof-img-container" style="margin-top:0;">
+          <a href="https://i.ibb.co/qFFgWvjB/1000206344.png" target="_blank" rel="noopener">
+            <img src="https://i.ibb.co/qFFgWvjB/1000206344.png" alt="Google Search Console performance for stockmarketkerala.com — 5.12K clicks, 197K impressions, 2.6% average CTR" loading="lazy">
+          </a>
+          <div class="proof-caption">Google Search Console performance showing massive non-brand organic growth.</div>
+        </div>
+        
+        <p>Driven by the topical content hub, Google now surfaces SMK blog articles for educational queries that previously went entirely to Entri App and Zerodha Varsity.</p>
+        
+        <table class="comp-table">
           <thead>
-            <tr style="border-bottom:2px solid rgba(242,240,233,0.15); font-family:'JetBrains Mono',monospace; color:#9C9A8E; text-transform:uppercase; font-size:11px;">
-              <th style="padding:14px 16px;">Metric</th>
-              <th style="padding:14px 16px;">Baseline</th>
-              <th style="padding:14px 16px;">After 6 Months</th>
-              <th style="padding:14px 16px;">Context</th>
+            <tr>
+              <th>Metric</th>
+              <th>Baseline</th>
+              <th>After 6 Months</th>
             </tr>
           </thead>
           <tbody>
-            <tr style="border-bottom:1px solid rgba(242,240,233,0.08);">
-              <td style="padding:16px; font-weight:600;">Non-Brand Organic Clicks</td>
-              <td style="padding:16px; color:#C2685B;">~220 / mo</td>
-              <td style="padding:16px; color:#F59E0B; font-weight:700;">~700 / mo (+218%)</td>
-              <td style="padding:16px; color:#9C9A8E;">Content hub driving educational query traffic Entri App previously captured</td>
+            <tr>
+              <td><strong>Non-Brand Organic Clicks</strong></td>
+              <td>~220/mo</td>
+              <td><strong style="color:#16A34A;">~700/mo (+218%)</strong></td>
             </tr>
-            <tr style="border-bottom:1px solid rgba(242,240,233,0.08);">
-              <td style="padding:16px; font-weight:600;">AI Mention Rate (20-prompt panel)</td>
-              <td style="padding:16px; color:#C2685B;">5%</td>
-              <td style="padding:16px; color:#F59E0B; font-weight:700;">62%</td>
-              <td style="padding:16px; color:#9C9A8E;">SMK now named in majority of "stock market course Kerala" AI answers</td>
+            <tr>
+              <td><strong>AI Mention Rate</strong> <span style="font-size:11px; font-weight:normal; display:block;">(20-prompt panel)</span></td>
+              <td>5%</td>
+              <td><strong style="color:#16A34A;">62%</strong></td>
             </tr>
-            <tr style="border-bottom:1px solid rgba(242,240,233,0.08);">
-              <td style="padding:16px; font-weight:600;">AI Share of Voice (Kerala trading queries)</td>
-              <td style="padding:16px; color:#C2685B;">&lt;3%</td>
-              <td style="padding:16px; color:#F59E0B; font-weight:700;">41%</td>
-              <td style="padding:16px; color:#9C9A8E;">Moved from invisible to dominant among local trading institute citations</td>
+            <tr>
+              <td><strong>AI Share of Voice</strong> <span style="font-size:11px; font-weight:normal; display:block;">(Kerala trading queries)</span></td>
+              <td>&lt;3%</td>
+              <td><strong style="color:#16A34A;">41%</strong></td>
             </tr>
-            <tr style="border-bottom:1px solid rgba(242,240,233,0.08);">
-              <td style="padding:16px; font-weight:600;">AI Overview Appearances</td>
-              <td style="padding:16px; color:#C2685B;">0 / 20 prompts</td>
-              <td style="padding:16px; color:#F59E0B; font-weight:700;">11 / 20 prompts</td>
-              <td style="padding:16px; color:#9C9A8E;">FAQ schema + answer-first blog content driving AI Overview cards</td>
+            <tr>
+              <td><strong>AI Overview Appearances</strong></td>
+              <td>0/20 prompts</td>
+              <td><strong style="color:#16A34A;">11/20 prompts</strong></td>
             </tr>
-            <tr style="border-bottom:1px solid rgba(242,240,233,0.08);">
-              <td style="padding:16px; font-weight:600;">Citation Rate (URL in AI response)</td>
-              <td style="padding:16px; color:#C2685B;">0%</td>
-              <td style="padding:16px; color:#F59E0B; font-weight:700;">34%</td>
-              <td style="padding:16px; color:#9C9A8E;">Blog articles + structured data enabling direct source links in Perplexity responses</td>
+            <tr>
+              <td><strong>Citation Rate</strong> <span style="font-size:11px; font-weight:normal; display:block;">(URL in AI response)</span></td>
+              <td>0%</td>
+              <td><strong style="color:#16A34A;">34%</strong></td>
             </tr>
-            <tr style="border-bottom:1px solid rgba(242,240,233,0.08);">
-              <td style="padding:16px; font-weight:600;">Branded Search Volume Lift</td>
-              <td style="padding:16px; color:#C2685B;">~800 / mo</td>
-              <td style="padding:16px; color:#F59E0B; font-weight:700;">~2,400 / mo (+200%)</td>
-              <td style="padding:16px; color:#9C9A8E;">AI mentions drive branded awareness before conversion intent forms</td>
-            </tr>
-            <tr style="border-bottom:2px solid rgba(242,240,233,0.15);">
-              <td style="padding:16px; font-weight:600;">Google Business Profile Impressions (3 locations)</td>
-              <td style="padding:16px; color:#C2685B;">Combined ~4,200 / mo</td>
-              <td style="padding:16px; color:#F59E0B; font-weight:700;">~11,800 / mo (+181%)</td>
-              <td style="padding:16px; color:#9C9A8E;">Local entity signals strengthened across Kochi, Kozhikode &amp; Trivandrum</td>
+            <tr>
+              <td><strong>Google Business Profile Impressions</strong></td>
+              <td>~4,200/mo</td>
+              <td><strong style="color:#16A34A;">~11,800/mo (+181%)</strong></td>
             </tr>
           </tbody>
         </table>
-      </div>
 
-      <!-- E-E-A-T callout -->
-      <div style="background:rgba(245,158,11,0.1); border:1px solid rgba(245,158,11,0.25); border-radius:20px; padding:36px; display:grid; grid-template-columns:1fr 1fr; gap:32px;">
-        <div>
-          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#F59E0B; margin-bottom:10px; text-transform:uppercase;">E-E-A-T Signal Improvements</div>
-          <h4 style="font-size:18px; font-weight:800; margin:0 0 12px; color:#F2F0E9; line-height:1.2;">Google's quality evaluators rate financial education sites on YMYL standards. Here's how the signals moved.</h4>
-        </div>
-        <div style="display:flex; flex-direction:column; gap:12px; font-size:14px;">
-          <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(242,240,233,0.1); padding-bottom:8px;">
-            <span style="color:#B9B7AC;">Experience signals</span>
-            <div style="display:flex; gap:6px; align-items:center;"><span style="color:#C2685B; font-size:12px;">Before: Student testimonials only</span><span style="color:#F59E0B;">→</span><span style="color:#F59E0B; font-weight:700;">Named alumni case studies</span></div>
-          </div>
-          <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(242,240,233,0.1); padding-bottom:8px;">
-            <span style="color:#B9B7AC;">Expertise signals</span>
-            <div style="display:flex; gap:6px; align-items:center;"><span style="color:#C2685B; font-size:12px;">Before: No bios</span><span style="color:#F59E0B;">→</span><span style="color:#F59E0B; font-weight:700;">NISM-certified instructor profiles</span></div>
-          </div>
-          <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(242,240,233,0.1); padding-bottom:8px;">
-            <span style="color:#B9B7AC;">Authoritativeness</span>
-            <div style="display:flex; gap:6px; align-items:center;"><span style="color:#C2685B; font-size:12px;">Before: 0 external citations</span><span style="color:#F59E0B;">→</span><span style="color:#F59E0B; font-weight:700;">8+ finance platform mentions</span></div>
-          </div>
-          <div style="display:flex; justify-content:space-between; align-items:center;">
-            <span style="color:#B9B7AC;">Trust signals</span>
-            <div style="display:flex; gap:6px; align-items:center;"><span style="color:#C2685B; font-size:12px;">Before: No schema</span><span style="color:#F59E0B;">→</span><span style="color:#F59E0B; font-weight:700;">Full JSON-LD + Course schema</span></div>
-          </div>
-        </div>
-      </div>
+        <h3>E-E-A-T Signal Improvements</h3>
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Signal</th>
+              <th>Before</th>
+              <th>After</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Experience</td>
+              <td>Student testimonials only</td>
+              <td>Named alumni case studies</td>
+            </tr>
+            <tr>
+              <td>Expertise</td>
+              <td>No bios</td>
+              <td>NISM-certified instructor profiles</td>
+            </tr>
+            <tr>
+              <td>Authoritativeness</td>
+              <td>0 external citations</td>
+              <td>8+ finance platform mentions</td>
+            </tr>
+            <tr>
+              <td>Trust</td>
+              <td>No schema</td>
+              <td>Full JSON-LD + Course schema</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-      <!-- AI ANSWER ENGINE PROOF -->
-      <div style="margin-top:72px;">
-        <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.08em; color:#F59E0B; text-transform:uppercase; margin-bottom:14px;">/ AI Answer Engine Proof</div>
-        <h3 style="font-size:clamp(22px,2.6vw,32px); font-weight:800; letter-spacing:-0.02em; margin:0 0 12px; line-height:1.1; color:#F2F0E9;">The work above produced real citations inside AI answer engines.</h3>
-        <p style="font-size:15px; line-height:1.55; color:#9C9A8E; margin:0 0 40px; max-width:64ch;">These screenshots show exactly how ChatGPT and Perplexity surface Stock Market Kerala when users search for offline stock market training in Kochi — direct proof that the entity, content, and technical layers are working.</p>
-
-        <!-- PART A: Cited by AI Search Engines -->
-        <div style="margin-bottom:48px;">
-          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#9C9A8E; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:20px;">A — Cited by AI Search Engines</div>
-
-          <!-- ChatGPT Evidence -->
-          <div style="background:rgba(242,240,233,0.04); border:1px solid rgba(242,240,233,0.1); border-radius:18px; padding:28px; margin-bottom:20px;">
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:start;">
-              <div>
-                <div style="display:inline-flex; align-items:center; gap:8px; background:rgba(245,158,11,0.12); border:1px solid rgba(245,158,11,0.25); border-radius:100px; padding:5px 14px; margin-bottom:16px;">
-                  <span style="font-family:'JetBrains Mono',monospace; font-size:10.5px; color:#F59E0B; font-weight:700; text-transform:uppercase; letter-spacing:0.05em;">ChatGPT</span>
-                </div>
-                <div style="font-size:17px; font-weight:700; color:#F2F0E9; line-height:1.35; margin-bottom:12px;">Ranked #2 of 6 institutes in ChatGPT's comparison of offline stock market training options in Kochi.</div>
-                <p style="font-size:13.5px; line-height:1.6; color:#9C9A8E; margin:0;">Query: <em>"offline stock market training in Kochi"</em> — ChatGPT's answer lists a comparison table of 6 Kochi institutes. SMK appears 2nd, described as offering classroom-based stock market education with a large student base, tagged for beginners.</p>
-              </div>
-              <div style="border-radius:12px; overflow:hidden; border:1px solid rgba(242,240,233,0.1);">
-                <img src="https://i.ibb.co/xKTDXwGM/Screenshot-2026-07-08-005022.png" alt="ChatGPT answer listing Stock Market Kerala ranked #2 of 6 offline training institutes in Kochi" style="width:100%; height:auto; display:block;">
-              </div>
-            </div>
-          </div>
-
-          <!-- Perplexity Evidence -->
-          <div style="background:rgba(242,240,233,0.04); border:1px solid rgba(242,240,233,0.1); border-radius:18px; padding:28px; margin-bottom:24px;">
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:28px; align-items:start;">
-              <div>
-                <div style="display:inline-flex; align-items:center; gap:8px; background:rgba(245,158,11,0.12); border:1px solid rgba(245,158,11,0.25); border-radius:100px; padding:5px 14px; margin-bottom:16px;">
-                  <span style="font-family:'JetBrains Mono',monospace; font-size:10.5px; color:#F59E0B; font-weight:700; text-transform:uppercase; letter-spacing:0.05em;">Perplexity AI</span>
-                </div>
-                <div style="font-size:17px; font-weight:700; color:#F2F0E9; line-height:1.35; margin-bottom:12px;">Directly cited by Perplexity AI as an offline training option in Kochi, sourced from official site content.</div>
-                <p style="font-size:13.5px; line-height:1.6; color:#9C9A8E; margin:0;">Query: <em>"Is there any offline stock market training in Kochi?"</em> — Perplexity lists SMK 2nd in its "Options I found" results, pulling from the brand's own site copy that mentions "offline stock market training" with Kochi as a listed location.</p>
-              </div>
-              <div style="border-radius:12px; overflow:hidden; border:1px solid rgba(242,240,233,0.1);">
-                <img src="https://i.ibb.co/4g7NXdfj/Screenshot-2026-07-08-005736.png" alt="Perplexity AI answer citing Stock Market Kerala as an offline training option in Kochi" style="width:100%; height:auto; display:block;">
-              </div>
-            </div>
-          </div>
+      <!-- Section 7 -->
+      <section class="content-section">
+        <div class="section-label">/ 07 AI Answer Engine Proof</div>
+        <h2>Direct Citations from ChatGPT &amp; Perplexity</h2>
+        <p>The work above produced real citations inside AI answer engines. These snippets show exactly how ChatGPT and Perplexity surface Stock Market Kerala when users search for offline stock market training in Kochi — direct proof that the entity, content, and technical layers are working.</p>
+        
+        <div class="callout" style="background:#14140F; color:#F2F0E9; border-left:4px solid #16A34A;">
+          <h3 style="color:#fff; margin-top:0;">ChatGPT: Ranked #2 of 6</h3>
+          <p style="color:#B9B7AC; font-size:15px; margin-bottom:0;">Query: <em>"offline stock market training in Kochi"</em> — ChatGPT's answer lists a comparison table of 6 Kochi institutes. SMK appears 2nd, described as offering classroom-based stock market education with a large student base, tagged for beginners.</p>
         </div>
 
-        <!-- PART B: Estimated Market Voice Share -->
-        <div>
-          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#9C9A8E; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:20px;">B — Estimated Market Voice Share</div>
-
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start;">
-            <!-- Stat Card -->
-            <div style="background:rgba(245,158,11,0.08); border:1px solid rgba(245,158,11,0.25); border-radius:20px; padding:32px;">
-              <div style="font-size:clamp(48px,7vw,72px); font-weight:900; letter-spacing:-0.04em; line-height:0.9; color:#fff; margin-bottom:4px;">20–25<span style="color:#F59E0B;">%</span></div>
-              <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#F59E0B; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:16px;">Estimated share of voice</div>
-              <p style="font-size:14.5px; line-height:1.6; color:#B9B7AC; margin:0 0 16px;">An <strong style="color:#F2F0E9;">estimated</strong> 20–25% share of voice among Kochi stock market training institutes — second only to the market's largest player — based on Maps presence, SEO footprint, 500+ reviews, and active social signals.</p>
-              <div style="display:flex; flex-wrap:wrap; gap:8px;">
-                <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#9C9A8E; background:rgba(242,240,233,0.06); padding:4px 10px; border-radius:100px;">Local Maps prominence</span>
-                <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#9C9A8E; background:rgba(242,240,233,0.06); padding:4px 10px; border-radius:100px;">SEO presence</span>
-                <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#9C9A8E; background:rgba(242,240,233,0.06); padding:4px 10px; border-radius:100px;">500+ reviews</span>
-                <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#9C9A8E; background:rgba(242,240,233,0.06); padding:4px 10px; border-radius:100px;">Active Instagram</span>
-                <span style="font-family:'JetBrains Mono',monospace; font-size:10px; color:#9C9A8E; background:rgba(242,240,233,0.06); padding:4px 10px; border-radius:100px;">Branded searches</span>
-              </div>
-              <div style="margin-top:16px; padding-top:14px; border-top:1px solid rgba(242,240,233,0.08);">
-                <p style="font-family:'JetBrains Mono',monospace; font-size:10px; line-height:1.5; color:#6A685D; margin:0;">⚠ This is an AI-modeled estimate based on publicly observable signals — not audited or verified analytics data.</p>
-              </div>
-            </div>
-
-            <!-- Voice Share Screenshot -->
-            <div style="border-radius:14px; overflow:hidden; border:1px solid rgba(242,240,233,0.1);">
-              <img src="https://i.ibb.co/x8HrmV07/Screenshot-2026-07-08-005905.png" alt="Estimated search visibility voice share table showing Stock Market Kerala at 20–25%" style="width:100%; height:auto; display:block;">
-              <div style="padding:14px 18px; background:rgba(242,240,233,0.04);">
-                <p style="font-family:'JetBrains Mono',monospace; font-size:10px; line-height:1.5; color:#6A685D; margin:0;">Source: AI-modeled estimate of local search visibility across Maps, organic, social, and third-party listing signals. Not verified analytics.</p>
-              </div>
-            </div>
-          </div>
+        <div class="callout" style="background:#14140F; color:#F2F0E9; border-left:4px solid #16A34A;">
+          <h3 style="color:#fff; margin-top:0;">Perplexity AI: Direct Citation</h3>
+          <p style="color:#B9B7AC; font-size:15px; margin-bottom:0;">Query: <em>"Is there any offline stock market training in Kochi?"</em> — Perplexity lists SMK 2nd in its "Options I found" results, pulling from the brand's own site copy that mentions "offline stock market training" with Kochi as a listed location.</p>
         </div>
 
-      </div>
+        <h3>20–25% Estimated Market Voice Share</h3>
+        <p>Estimated share of voice among Kochi stock market training institutes — second only to the market's largest player — based on Maps presence, SEO footprint, 500+ reviews, and active social signals.</p>
+        <p style="font-size:13px; font-family:'JetBrains Mono',monospace; color:#6A685D;">⚠ This is an AI-modeled estimate based on publicly observable signals — not audited or verified analytics data.</p>
+      </section>
 
-    </div>
-  </section>
+      <!-- Section 8 -->
+      <section class="content-section">
+        <div class="section-label">/ 08 Key Learnings</div>
+        <h2>Takeaways from the Campaign</h2>
+        <ol>
+          <li><strong>Conversion pages are SEO dead ends:</strong> A site that's 90% enrollment landing pages is invisible for everything except branded queries. The 100-article content hub was non-negotiable before anything else could move.</li>
+          <li><strong>Local strength ≠ AI citation strength:</strong> SMK had 4.7★ reviews and 3 physical branches — but zero AI presence. AI engines don't crawl Google Maps. They crawl content, structured data, and third-party editorial mentions.</li>
+          <li><strong>YMYL niche demands named experts:</strong> Financial education is a YMYL category. The instructor profile pages with Person schema were among the highest-leverage E-E-A-T investments we made.</li>
+          <li><strong>GBP is the AI's local entity anchor:</strong> Gemini and Google AI Overviews pull heavily from Google Business Profiles for local service recommendations. Optimizing SMK's 3 GBPs was the fastest path to appearing in location-specific AI answers.</li>
+        </ol>
+      </section>
 
-  <!-- KEY LEARNINGS -->
-  <section style="max-width:1080px; margin:0 auto; padding:80px 40px 0;">
-    <div style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:0.08em; color:#6A685D; text-transform:uppercase; margin-bottom:36px;">/ Key Learnings</div>
-    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
-      <div style="background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:16px; padding:24px;">
-        <div style="font-size:13px; font-weight:800; margin-bottom:8px; color:#14140F;">01 — Conversion pages are SEO dead ends</div>
-        <p style="font-size:14.5px; line-height:1.6; color:#4A4941; margin:0;">A site that's 90% enrollment landing pages is invisible for everything except branded queries. AI engines and Google's informational ranking both require content that answers questions first — sell second. The 100-article content hub was non-negotiable before anything else could move.</p>
-      </div>
-      <div style="background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:16px; padding:24px;">
-        <div style="font-size:13px; font-weight:800; margin-bottom:8px; color:#14140F;">02 — Local strength ≠ AI citation strength</div>
-        <p style="font-size:14.5px; line-height:1.6; color:#4A4941; margin:0;">SMK had 4.7★ reviews and 3 physical branches — but zero AI presence. AI engines don't crawl Google Maps. They crawl content, structured data, and third-party editorial mentions. Local SEO and AI search require completely different execution tracks.</p>
-      </div>
-      <div style="background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:16px; padding:24px;">
-        <div style="font-size:13px; font-weight:800; margin-bottom:8px; color:#14140F;">03 — YMYL niche demands named experts</div>
-        <p style="font-size:14.5px; line-height:1.6; color:#4A4941; margin:0;">Financial education is a YMYL category — Google and LLMs apply extra scrutiny. A faceless institute can't compete against named, credentialed instructors with published content. The instructor profile pages with Person schema were among the highest-leverage E-E-A-T investments we made.</p>
-      </div>
-      <div style="background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:16px; padding:24px;">
-        <div style="font-size:13px; font-weight:800; margin-bottom:8px; color:#14140F;">04 — GBP is the AI's local entity anchor</div>
-        <p style="font-size:14.5px; line-height:1.6; color:#4A4941; margin:0;">Gemini and Google AI Overviews pull heavily from Google Business Profiles for local service recommendations. Optimizing SMK's 3 GBPs — photos, Q&amp;A, review responses, accurate NAP — was the fastest path to appearing in location-specific AI answers while the content hub built its authority.</p>
-      </div>
-    </div>
-  </section>
+    </main>
+  </div>
 
-  <!-- CONTACT + NEXT -->
-  <section style="max-width:1080px; margin:0 auto; padding:64px 40px 20px;">
-    <a href="case-zoople-webcastle.dc.html" style="text-decoration:none; color:inherit; display:block;">
-      <div style="background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:22px; padding:36px; display:flex; align-items:center; justify-content:space-between; gap:24px;" style-hover="border-color:#14140F;">
-        <div>
-          <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A685D; margin-bottom:8px;">NEXT CASE STUDY →</div>
-          <h3 style="font-size:clamp(20px,2.4vw,28px); font-weight:800; letter-spacing:-0.015em; margin:0;">Full-funnel organic + paid growth</h3>
-        </div>
-        <div style="font-size:28px; font-weight:900; color:#F59E0B;">→</div>
-      </div>
-    </a>
-  </section>
-
-  <section style="max-width:1080px; margin:40px auto 0; padding:0 40px 70px;">
-    <div style="background:#F59E0B; color:#14140F; border-radius:28px; padding:clamp(36px,5vw,64px); text-align:center;">
-      <h2 style="font-size:clamp(28px,4vw,48px); font-weight:900; letter-spacing:-0.02em; margin:0 0 26px; line-height:1.02;">Let's build your search authority engine.</h2>
-      <div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:center;">
-        <a href="https://wa.me/918129917227" target="_blank" style="background:#14140F; color:#F2F0E9; font-weight:700; font-size:15px; padding:15px 28px; border-radius:100px; text-decoration:none;" style-hover="background:#fff; color:#14140F;">WhatsApp me</a>
-        <a href="mailto:tibin.jacob.uiux@gmail.com" style="background:transparent; color:#14140F; font-weight:700; font-size:15px; padding:15px 28px; border-radius:100px; text-decoration:none; border:1.5px solid rgba(20,20,15,0.4);" style-hover="border-color:#14140F;">Email me</a>
-      </div>
-    </div>
-  </section>
-
-  <footer style="max-width:1080px; margin:0 auto; padding:40px 40px 60px; display:flex; align-items:center; justify-content:space-between;">
-    <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#9C9A8E;">© 2026 Tibin Jacob · AEO / GEO / SEO Consultant</div>
-    <div style="display:flex; gap:16px;">
-      <a href="https://wa.me/918129917227" target="_blank" style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6A685D; text-decoration:none;" style-hover="color:#F59E0B;">WhatsApp</a>
-      <a href="mailto:tibin.jacob.uiux@gmail.com" style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6A685D; text-decoration:none;" style-hover="color:#F59E0B;">Email</a>
-    </div>
-  </footer>
-
-</div>
 </x-dc>
 </body>
 </html>
