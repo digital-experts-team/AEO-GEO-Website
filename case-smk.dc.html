@@ -537,6 +537,25 @@
         </ol>
       </section>
 
+    
+      <!-- FAQ Section -->
+      <section class="content-section">
+        <div class="section-label">/ FAQ</div>
+        <h2>Technical Breakdown: AEO / GEO Methodology</h2>
+        
+        <h3 style="font-size:18px; margin-bottom:8px; color:#14140F;">Q: Why does a business appearing in a Perplexity answer matter differently than ranking #1 on Google?</h3>
+        <p style="margin-bottom:24px;">A: Perplexity and ChatGPT don't return a ranked list of links — they synthesize a single answer from a small set of sources they trust enough to cite directly. Being one of the sources an LLM pulls from means the model's retrieval layer judged the page's content as directly answering the query, not just relevant to it. That's a different bar than ranking algorithmically — it's closer to being selected as a citation in a research summary.</p>
+        
+        <h3 style="font-size:18px; margin-bottom:8px; color:#14140F;">Q: The case study distinguishes a "citation" (Perplexity/ChatGPT mentions) from a "voice share estimate." Why does that distinction matter technically?</h3>
+        <p style="margin-bottom:24px;">A: A citation is a direct observation — the engine literally returned it. A voice share estimate is a modeled inference built from proxy signals (Maps prominence, review volume, branded search behavior, social activity) — it approximates visibility across a wider set of unobserved queries, but it's a model output, not a measurement. Treating an estimate as if it were a citation is the single most common error in AEO reporting, and this case study deliberately keeps them separated.</p>
+
+        <h3 style="font-size:18px; margin-bottom:8px; color:#14140F;">Q: What made Stock Market Kerala's own site content eligible to be pulled into Perplexity's answer in the first place?</h3>
+        <p style="margin-bottom:24px;">A: Perplexity's citation explicitly notes the source "mentions 'offline stock market training' and lists Kochi on its site" — meaning the page's on-page copy contained the literal phrase and location the query was asking about. This reflects a core AEO principle: LLM retrieval favors pages whose language mirrors the way a user actually phrases a question, not just pages that are topically related.</p>
+
+        <h3 style="font-size:18px; margin-bottom:8px; color:#14140F;">Q: What would need to be true for this position to be defensible against a competitor closing the gap?</h3>
+        <p>A: Sustained content freshness and multi-surface consistency — the same location/service phrasing repeated coherently across the website, directory listings (HiDubai-equivalent), and social presence, since LLMs increasingly cross-reference multiple independent sources rather than trusting a single page.</p>
+      </section>
+
     </main>
   </div>
 
