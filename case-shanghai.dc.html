@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<title>Shanghai Global Auto — SEO & Optimization Case Study | Tibin Jacob</title>
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background:#F2F0E9; color:#14140F; font-family:'Archivo',sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  ::selection { background: #F59E0B; color: #fff; }
+
+  /* Dual Column Layout */
+  .case-container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 40px 40px 80px;
+    display: flex;
+    align-items: flex-start;
+    gap: 80px;
+  }
+  
+  .sidebar {
+    flex: 0 0 280px;
+    position: sticky;
+    top: 120px;
+  }
+  
+  .content-column {
+    flex: 1;
+    max-width: 720px;
+  }
+
+  .at-a-glance {
+    background: #fff;
+    border: 1px solid rgba(20,20,15,0.1);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-shadow: 0 4px 24px -12px rgba(20,20,15,0.05);
+  }
+
+  .glance-item .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #6A685D;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .glance-item .value {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+    color: #14140F;
+  }
+  
+  .content-section {
+    margin-bottom: 80px;
+  }
+
+  .content-section h2 {
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0 0 24px;
+    line-height: 1.2;
+  }
+  
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    color: #F59E0B;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .content-section p, .content-section li {
+    font-size: 17.5px;
+    line-height: 1.65;
+    color: #3B3A33;
+    margin: 0 0 20px;
+  }
+  
+  .content-section ul, .content-section ol {
+    margin: 0 0 24px;
+    padding-left: 24px;
+  }
+  
+  .content-section li { margin-bottom: 10px; }
+
+  /* Tables */
+  .comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 15px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(20,20,15,0.1);
+  }
+  
+  .comp-table th {
+    background: rgba(20,20,15,0.03);
+    text-align: left;
+    padding: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #6A685D;
+    border-bottom: 1px solid rgba(20,20,15,0.1);
+    letter-spacing: 0.05em;
+  }
+  
+  .comp-table td {
+    padding: 18px 16px;
+    border-bottom: 1px solid rgba(20,20,15,0.05);
+    color: #14140F;
+    vertical-align: top;
+    line-height: 1.5;
+  }
+  .comp-table tr:last-child td { border-bottom: none; }
+
+  /* Metric Row */
+  .metric-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  
+  .metric-card {
+    background: #14140F;
+    color: #F2F0E9;
+    padding: 32px 20px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 12px 24px -12px rgba(20,20,15,0.25);
+  }
+  
+  .metric-val {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1;
+    color: #16A34A; /* Lighthouse Green */
+    margin-bottom: 12px;
+  }
+  
+  .metric-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: #9C9A8E;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  @media (max-width: 900px) {
+    .case-container {
+      flex-direction: column;
+      padding: 40px 20px;
+      gap: 48px;
+    }
+    .sidebar { position: static; width: 100%; flex: auto; }
+    .content-column { max-width: 100%; }
+    .metric-row { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    table, thead, tbody, th, td, tr { display: block; width: 100%; }
+    thead tr { display: none; }
+    tr { margin-bottom: 16px; border: 1px solid rgba(20,20,15,0.1); border-radius: 8px; padding: 12px; background: #fff; }
+    td { border-bottom: 1px solid rgba(20,20,15,0.05); padding: 8px 0; }
+  }
+</style>
+</helmet>
+
+  <!-- NAV -->
+  <nav style="position:sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:18px 40px; background:rgba(242,240,233,0.82); backdrop-filter:blur(12px); border-bottom:1px solid rgba(20,20,15,0.1);">
+    <a href="index.html" style="display:inline-flex; align-items:center; gap:9px; text-decoration:none; color:#14140F; font-family:'JetBrains Mono',monospace; font-size:12.5px;">← Tibin Jacob</a>
+    <a href="https://wa.me/918129917227" target="_blank" style="display:inline-flex; align-items:center; gap:8px; background:#14140F; color:#F2F0E9; font-weight:600; font-size:13px; padding:10px 18px; border-radius:100px; text-decoration:none;">Contact</a>
+  </nav>
+
+  <!-- HERO -->
+  <header style="max-width:1120px; margin:0 auto; padding:100px 40px 20px;">
+    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:30px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#fff; background:#16A34A; padding:6px 12px; border-radius:100px; letter-spacing:0.04em;">SEO · OPTIMIZATION</span>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A685D; background:rgba(20,20,15,0.05); padding:6px 12px; border-radius:100px; letter-spacing:0.04em;">shanghaiglobalauto.com</span>
+    </div>
+    <h1 style="font-size:clamp(42px,6vw,76px); line-height:0.96; font-weight:900; letter-spacing:-0.035em; margin:0 0 24px; max-width:20ch;">Shanghai Auto Global</h1>
+  </header>
+
+  <div class="case-container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="at-a-glance">
+        <div class="glance-item">
+          <div class="label">Client</div>
+          <div class="value">Shanghai Global Auto Spare Parts Co. LLC (Dubai, UAE)</div>
+        </div>
+        <div class="glance-item">
+          <div class="label">Industry</div>
+          <div class="value">Automotive Spare Parts (OEM &amp; Aftermarket)</div>
+        </div>
+        <div class="glance-item">
+          <div class="label">Focus</div>
+          <div class="value">Technical Performance, Programmatic SEO &amp; Competitive Footprint</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content-column">
+      
+      <!-- Section 1 -->
+      <section class="content-section">
+        <div class="section-label">/ 01 Company Overview</div>
+        <h2>Supplier of Chinese Vehicle Brands</h2>
+        <p>Shanghai Global Auto Spare Parts Co. LLC is a Dubai-based supplier and distributor of OEM and aftermarket spare parts for Chinese vehicle brands, serving Dubai, Sharjah, and Abu Dhabi. It sources directly from Chinese manufacturers, covering brands including Changan, Chery, GAC, Geely, JAC, Jetour, Chana, Haval, MG, and GWM.</p>
+        <p>It operates a main hub plus a newer Abu Dhabi branch, with listed locations in Deira/Abu Hail (Dubai) and an industrial-area branch in Sharjah.</p>
+        <div style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A685D; margin-top:24px;">Source: shanghaiglobalauto.com site pages, ReachUAE directory, HiDubai listing, Yandex Maps</div>
+      </section>
+
+      <!-- Section 2 -->
+      <section class="content-section">
+        <div class="section-label">/ 02 Technical Performance &amp; On-Page SEO</div>
+        <h2>Desktop PageSpeed Optimization</h2>
+        <div class="metric-row">
+          <div class="metric-card"><div class="metric-val">96</div><div class="metric-label">Performance</div></div>
+          <div class="metric-card"><div class="metric-val">96</div><div class="metric-label">Accessibility</div></div>
+          <div class="metric-card"><div class="metric-val">100</div><div class="metric-label">Best Practices</div></div>
+          <div class="metric-card"><div class="metric-val">100</div><div class="metric-label">SEO</div></div>
+        </div>
+        <p style="font-size:14px; font-style:italic; color:#6A685D; margin-top:8px;">Desktop PageSpeed Insights score, measured Jun 7, 2025.</p>
+      </section>
+
+      <!-- Section 3 -->
+      <section class="content-section">
+        <div class="section-label">/ 03 Top Target Keywords</div>
+        <h2>Primary target keywords</h2>
+        <ul style="background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:12px; padding:24px 24px 24px 44px; margin-bottom:16px; font-family:'JetBrains Mono',monospace; font-size:14px;">
+          <li style="margin-bottom:12px;">best chinese car parts uae</li>
+          <li style="margin-bottom:12px;">best chinese car parts dubai</li>
+          <li style="margin-bottom:12px;">best chinese car parts sharjah</li>
+          <li style="margin-bottom:12px;">best chinese spare part dealers in Dubai</li>
+          <li>best chinese spare part dealers in sharjah</li>
+        </ul>
+      </section>
+
+      <!-- Section 4 -->
+      <section class="content-section">
+        <div class="section-label">/ 04 Competitive Landscape</div>
+        <h2>Who Shanghai Global Competes With</h2>
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Competitor</th>
+              <th>Positioning</th>
+              <th>Notable signal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Samdo Auto Spare Parts Trading LLC</strong></td>
+              <td>Chinese car parts specialist, Ras Al Khor, 14+ yrs parent-company history</td>
+              <td>Exhibited at Automechanika Dubai 2025 (major regional trade show)</td>
+            </tr>
+            <tr>
+              <td><strong>Chinese Car Parts LLC</strong><br><span style="font-size:12.5px; color:#6A685D; font-family:'JetBrains Mono',monospace;">chinesecarparts.net/.shop/.ae</span></td>
+              <td>Multi-location (Al Quoz + Ajman), broad brand coverage incl. BYD EV models</td>
+              <td>E-commerce-enabled, per-model landing pages</td>
+            </tr>
+            <tr>
+              <td><strong>Noorhan Trading</strong><br><span style="font-size:12.5px; color:#6A685D; font-family:'JetBrains Mono',monospace;">noorhantrdg.com</span></td>
+              <td>Chinese car parts + broader auto parts trading</td>
+              <td>Publishes long-form educational SEO content</td>
+            </tr>
+            <tr>
+              <td><strong>APEC Auto</strong></td>
+              <td>Wholesale-focused, Jebel Ali free zone warehouse</td>
+              <td>B2B/bulk positioning, large SKU catalog claim</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="font-size:15px; color:#4A4941; padding:20px; background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:12px; line-height:1.6;">Shanghai Global's core differentiation claims (genuine/OEM/aftermarket, fast delivery, wide brand coverage) are shared by nearly every competitor in this space — the two competitors ahead on credibility signals specifically are Samdo (trade-show presence) and Noorhan (educational content depth).</p>
+      </section>
+
+      <!-- Section 5 -->
+      <section class="content-section">
+        <div class="section-label">/ 05 Site &amp; Content Structure</div>
+        <h2>Programmatic SEO Structure</h2>
+        <ul style="font-family:'JetBrains Mono',monospace; font-size:14px; color:#4A4941; background:#fff; border:1px solid rgba(20,20,15,0.1); border-radius:12px; padding:24px 24px 24px 44px; margin-bottom:24px;">
+          <li style="margin-bottom:12px;">/changan-spare-parts/</li>
+          <li style="margin-bottom:12px;">/gwm/</li>
+          <li style="margin-bottom:12px;">/best-chinese-car-spare-parts-in-abu-dhabi/</li>
+          <li style="margin-bottom:12px;">/oem-spare-parts/</li>
+          <li style="margin-bottom:12px;">/auto-brands-spare/</li>
+          <li>/chinese-car-parts-store/</li>
+        </ul>
+        <p>Shanghai Global already runs the right SEO pattern — dedicated pages per brand and per city. The main gap versus top competitors is content depth: competitor pages read as longer-form and educational, while Shanghai Global's pages are shorter and more directly promotional.</p>
+      </section>
+
+      <!-- Section 6 -->
+      <section class="content-section">
+        <div class="section-label">/ 06 Directory &amp; Citation Footprint</div>
+        <h2>Entity Footprint</h2>
+        <ul style="margin-bottom:24px;">
+          <li>HiDubai listing (Deira/Abu Hail)</li>
+          <li>ReachUAE business directory listing</li>
+          <li>Yandex Maps listing (Sharjah branch) — currently shows "No reviews yet"</li>
+          <li>Instagram: @shanghaiglobalparts</li>
+          <li>Facebook: "Shanghai auto parts and accessories" page</li>
+        </ul>
+        <p style="font-size:14.5px; font-style:italic; color:#6A685D; padding:16px 20px; border-left:3px solid #F59E0B; background:rgba(245,158,11,0.05); border-radius:0 12px 12px 0;">Review counts and star ratings on Google Maps could not be independently verified through available research tools — these figures should come from the business's own Google Business Profile dashboard before being published as a metric.</p>
+      </section>
+
+      <!-- Section 7 -->
+      <section class="content-section">
+        <div class="section-label">/ 07 Opportunities / Recommendations</div>
+        <h2>Action Plan</h2>
+        <ol style="display:flex; flex-direction:column; gap:16px;">
+          <li>Close the desktop-vs-mobile performance gap — mobile PageSpeed data should be pulled fresh and addressed if it lags desktop (desktop currently scores 96/96/100/100).</li>
+          <li>Build longer-form, question-answering content on existing brand/city pages, matching the depth pattern used by Noorhan Trading.</li>
+          <li>Pursue a trade-show or industry-event presence/listing — Samdo's Automechanika Dubai 2025 exhibitor status is a credible, linkable authority signal Shanghai Global currently lacks an equivalent to.</li>
+          <li>Actively generate reviews on all location listings, starting with the Sharjah Yandex listing, which currently shows zero reviews.</li>
+        </ol>
+      </section>
+
+    </main>
+  </div>
+
+</x-dc>
+</body>
+</html>
